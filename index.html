@@ -1,112 +1,623 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>brkbeats | Audio Software & Tools</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0b0b0c;
-            color: #f3f4f6;
-            line-height: 1.6;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 80vh;
-        }
-        .container {
-            max-width: 600px;
-            text-align: center;
-            background-color: #131316;
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #222227;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        h1 {
-            font-size: 2.5rem;
-            letter-spacing: -0.05em;
-            margin-bottom: 5px;
-            color: #fff;
-        }
-        .tagline {
-            color: #9ca3af;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-        .product-card {
-            border-top: 1px solid #222227;
-            margin-top: 20px;
-            padding-top: 30px;
-            text-align: left;
-        }
-        h2 {
-            font-size: 1.5rem;
-            color: #fff;
-            margin-bottom: 10px;
-        }
-        .price {
-            font-size: 1.25rem;
-            color: #10b981;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #3b82f6;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 10px;
-            transition: background 0.2s;
-        }
-        .btn:hover {
-            background-color: #2563eb;
-        }
-        footer {
-            margin-top: 40px;
-            font-size: 0.85rem;
-            color: #4b5563;
-            text-align: center;
-        }
-        footer a {
-            color: #6b7280;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        footer a:hover {
-            color: #9ca3af;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brkbeats – SP-404MK2 Effects Controller</title>
+  <meta name="description" content="A dedicated multi-format controller for managing, shaping, and automating effects on the Roland SP-404MK2. Available as a Standalone App, VST3, and AU Plugin for Mac and Windows." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0a0a;
+      --surface:   #141414;
+      --card:      #1a1a1a;
+      --border:    #272727;
+      --accent:    #FF8C00;
+      --accent-dim:#b36200;
+      --text:      #e8e8e8;
+      --muted:     #888;
+      --mono:      'Space Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 60px;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-buy {
+      background: var(--accent);
+      color: #000;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-buy:hover { background: #ffaa33; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px;
+      overflow: hidden;
+    }
+
+    /* Signature element: amber radial glow that pulses like the MIDI activity dot in the app */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(ellipse at center, rgba(255,140,0,0.10) 0%, transparent 70%);
+      animation: pulse 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1);   }
+      50%       { opacity: 1.0; transform: translate(-50%, -50%) scale(1.12); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero::before { animation: none; }
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: clamp(36px, 6vw, 72px);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      max-width: 820px;
+      position: relative;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero-sub {
+      margin-top: 24px;
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+      position: relative;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 14px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: #ffaa33; transform: translateY(-1px); }
+
+    .btn-price {
+      font-family: var(--mono);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .hero-formats {
+      display: flex;
+      gap: 10px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+
+    .format-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 5px 10px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border), transparent);
+      margin: 0 auto;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 80px 24px; max-width: 1080px; margin: 0 auto; }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: clamp(26px, 3.5vw, 40px);
+      letter-spacing: -0.02em;
+      margin-bottom: 48px;
+      line-height: 1.15;
+    }
+
+    /* ── FEATURES ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .feature-card {
+      background: var(--card);
+      padding: 32px 28px;
+    }
+
+    .feature-icon {
+      font-size: 24px;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .feature-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .feature-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+    }
+
+    .how-step { position: relative; }
+
+    .step-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .how-step h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .how-step p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* ── FORMATS ── */
+    .formats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .format-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .format-card .fmt-icon { font-size: 28px; margin-bottom: 12px; display: block; }
+
+    .format-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .format-card p { font-size: 13px; color: var(--muted); }
+
+    /* ── PRICING ── */
+    .pricing-card {
+      background: var(--card);
+      border: 1px solid var(--accent-dim);
+      border-radius: 8px;
+      padding: 48px;
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .pricing-card .price-amount {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 64px;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .pricing-card .price-label {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-top: 8px;
+      margin-bottom: 32px;
+      text-transform: uppercase;
+    }
+
+    .pricing-includes {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 36px;
+    }
+
+    .pricing-includes li {
+      font-size: 15px;
+      color: var(--text);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pricing-includes li::before {
+      content: '▸';
+      color: var(--accent);
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+
+    .btn-buy-full {
+      display: block;
+      background: var(--accent);
+      color: #000;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 16px 0;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-buy-full:hover { background: #ffaa33; transform: translateY(-1px); }
+
+    /* ── COMING SOON ── */
+    .coming-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .coming-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .coming-card::after {
+      content: 'COMING SOON';
+      position: absolute;
+      top: 18px;
+      right: -28px;
+      background: var(--border);
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      padding: 4px 36px;
+      transform: rotate(45deg);
+    }
+
+    .coming-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .coming-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .pricing-card { padding: 32px 24px; }
+      .pricing-card .price-amount { font-size: 48px; }
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>brkbeats</h1>
-    <p class="tagline">Next-generation utilities and DSP tools for modern music producers.</p>
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="/">BRKBEATS</a>
+    <a class="nav-buy" href="#buy">Buy — $29</a>
+  </nav>
 
-    <div class="product-card">
-        <h2>Ottava / SP-404MK2 Effects Controller</h2>
-        <p>A standalone application and AU/VST3 plugin designed to streamline tactile control and effect layouts for music production workflows.</p>
-        <div class="price">Single License: $29.00</div>
-        <a href="#" class="btn" onclick="alert('Launching soon!'); return false;">Buy Now</a>
-    </div>
-</div>
-
-<footer>
-    <p>Support contact: brkbeats.dev@gmail.com</p>
-    <p>
-        <a href="#" onclick="alert('Our privacy policy protects your data.'); return false;">Privacy Policy</a> | 
-        <a href="#" onclick="alert('Terms of Service and terms of use.'); return false;">Terms of Service</a>
+  <!-- HERO -->
+  <div class="hero">
+    <p class="hero-eyebrow">Roland SP-404MK2 — Effects Controller</p>
+    <h1>Take full control of your <span>SP-404MK2</span> effects.</h1>
+    <p class="hero-sub">
+      A dedicated multi-format controller for managing, shaping, and automating every
+      effect parameter on your SP-404MK2 — in real time, from any DAW or standalone.
     </p>
-    <p>&copy; 2026 brkbeats. All rights reserved.</p>
-</footer>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#buy">Buy Now</a>
+      <span class="btn-price">$29</span>
+    </div>
+    <div class="hero-formats">
+      <span class="format-tag">Standalone</span>
+      <span class="format-tag">VST3</span>
+      <span class="format-tag">AU</span>
+      <span class="format-tag">Mac</span>
+      <span class="format-tag">Windows</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FEATURES -->
+  <section>
+    <p class="section-label">What it does</p>
+    <h2 class="section-title">Everything your SP-404MK2<br>effects chain needs.</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">🎛</span>
+        <h3>Real-Time Parameter Control</h3>
+        <p>All five effect processors — Bus 1–4 and Input FX — mapped to a clean, resizable interface with instant hardware feedback.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">⚡</span>
+        <h3>MIDI CC Automation</h3>
+        <p>Every knob responds to incoming MIDI CC messages. Draw automation in your DAW or drive it from a hardware controller — your workflow, your choice.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔁</span>
+        <h3>Sync Hardware</h3>
+        <p>One button pushes the current UI state directly to your SP-404MK2 over USB — no menu diving, no manual matching.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔒</span>
+        <h3>One-Time Activation</h3>
+        <p>Simple online license activation on first launch. After that the license is stored locally — no internet required for studio sessions.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <p class="section-label">Setup</p>
+    <h2 class="section-title">Up and running in minutes.</h2>
+    <div class="how-grid">
+      <div class="how-step">
+        <p class="step-num">STEP 01</p>
+        <h3>Connect your SP-404MK2</h3>
+        <p>Plug in via USB-C. Open the app and select your SP-404MK2 as the MIDI input and output device.</p>
+      </div>
+      <div class="how-step">
+        <p class="step-num">STEP 02</p>
+        <h3>Select your format</h3>
+        <p>Run standalone for hardware-only sessions, or drop it into Logic, Ableton, Cubase, or any VST3-compatible DAW.</p>
+      </div>
+      <div class="how-step">
+        <p class="step-num">STEP 03</p>
+        <h3>Shape your effects</h3>
+        <p>Dial in parameters visually, automate them in your DAW timeline, or drive them live from a MIDI controller.</p>
+      </div>
+      <div class="how-step">
+        <p class="step-num">STEP 04</p>
+        <h3>Sync to hardware</h3>
+        <p>Hit Sync Hardware to push your settings directly to the SP-404MK2. What you see is what you hear.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FORMATS -->
+  <section>
+    <p class="section-label">Formats & Platforms</p>
+    <h2 class="section-title">One purchase. Every format.</h2>
+    <div class="formats-grid">
+      <div class="format-card">
+        <span class="fmt-icon">🖥</span>
+        <h3>Standalone — Mac</h3>
+        <p>No DAW required. Lightweight session companion.</p>
+      </div>
+      <div class="format-card">
+        <span class="fmt-icon">🖥</span>
+        <h3>Standalone — Windows</h3>
+        <p>Full Windows 10/11 support out of the box.</p>
+      </div>
+      <div class="format-card">
+        <span class="fmt-icon">🔌</span>
+        <h3>VST3 — Mac & Windows</h3>
+        <p>Works in any VST3-compatible DAW. Full automation support.</p>
+      </div>
+      <div class="format-card">
+        <span class="fmt-icon">🍎</span>
+        <h3>AU — Mac</h3>
+        <p>Native Audio Unit for Logic Pro with full MIDI routing.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PRICING -->
+  <section id="buy">
+    <p class="section-label">Pricing</p>
+    <h2 class="section-title" style="text-align:center;">One price. All formats. Forever.</h2>
+    <div class="pricing-card">
+      <div class="price-amount">$29</div>
+      <div class="price-label">One-time purchase — no subscription</div>
+      <ul class="pricing-includes">
+        <li>Standalone App for Mac &amp; Windows</li>
+        <li>VST3 Plugin for Mac &amp; Windows</li>
+        <li>Audio Unit (AU) Plugin for Mac</li>
+        <li>License key works on up to 3 machines</li>
+        <li>Free updates for life</li>
+        <li>PDF setup guide included</li>
+      </ul>
+      <a class="btn-buy-full" href="YOUR_CREEM_CHECKOUT_LINK">Buy Now — $29</a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- COMING SOON -->
+  <section>
+    <p class="section-label">What's Next</p>
+    <h2 class="section-title">More tools for producers<br>coming soon.</h2>
+    <div class="coming-grid">
+      <div class="coming-card">
+        <h3>Logic Loop Prep Engine</h3>
+        <p>A dedicated loop preparation utility for Logic Pro. Batch process, tag, and organize your loops with metadata that actually survives the export.</p>
+      </div>
+      <div class="coming-card">
+        <h3>Ottava</h3>
+        <p>More details coming soon. Stay tuned.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">BRKBEATS</div>
+    <p>Built by an independent developer in Austin, Texas.</p>
+    <p style="margin-top:8px;">
+      <a href="mailto:brkbeats.dev@gmail.com">brkbeats.dev@gmail.com</a>
+    </p>
+    <p style="margin-top:20px; font-size:12px;">© 2026 Brkbeats. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
