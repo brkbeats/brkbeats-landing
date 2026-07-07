@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refund Policy – BRKBEATS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0a0a;
+      --surface:   #141414;
+      --card:      #1a1a1a;
+      --border:    #272727;
+      --accent:    #FF8C00;
+      --text:      #e8e8e8;
+      --muted:     #888;
+      --mono:      'Space Mono', monospace;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 60px;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    main {
+      padding: 80px 24px;
+      max-width: 760px;
+      margin: 0 auto;
+      min-height: 80vh;
+    }
+
+    .meta-date {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    p {
+      color: var(--text);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    strong {
+      color: #fff;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 20px;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      main { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="/">BRKBEATS</a>
+  </nav>
+
+  <main>
+    <p class="meta-date">Last updated: July 7, 2026</p>
+    <h1>Refund Policy</h1>
+    
+    <p>Thank you for shopping with us. We want to ensure you have a great experience with our products.</p>
+
+    <h2>Digital Downloads and Software</h2>
+    <p>Because our products are digital goods delivered via Internet download or digital license keys, all sales are generally final.</p>
+    
+    <ul>
+      <li><strong>Eligibility for Refunds:</strong> We offer a money-back guarantee if the digital software or product is completely non-functional, contains critical defects that prevent its core use, or if it was purchased by mistake and <strong>the license key has not been activated or the product has not been downloaded</strong>.</li>
+      <li><strong>Exception:</strong> If you experience technical issues with our digital products, please reach out to our support team. We will work diligently to resolve the issue. If we are unable to resolve a verified technical defect within a reasonable timeframe, a full refund may be issued.</li>
+    </ul>
+
+    <h2>How to Request a Refund</h2>
+    <p>To request a refund or support, please contact us at <strong>support@brkbeats.dev</strong> with:</p>
+    <ol>
+      <li>Your order number.</li>
+      <li>The email address associated with the purchase.</li>
+      <li>A brief description of the issue or reason for the request.</li>
+    </ol>
+    
+    <p>Approved refunds will be credited automatically to your original method of payment within a certain amount of days, depending on your card issuer's policies.</p>
+  </main>
+
+  <footer>
+    <div class="footer-logo" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; color: var(--accent); margin-bottom: 12px;">BRKBEATS</div>
+    <p>Built by an independent developer in Austin, Texas.</p>
+    <p style="margin-top:8px;">
+      <a href="mailto:support@brkbeats.dev">support@brkbeats.dev</a>
+    </p>
+    <p style="margin-top:20px; font-size:12px;">© 2026 Brkbeats. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
