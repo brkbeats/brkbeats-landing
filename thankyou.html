@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You — Brkbeats</title>
+  <meta name="description" content="Thank you for your purchase. Here's how to download and activate your SP-404MK2 Effects Controller." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0a0a;
+      --surface:   #141414;
+      --card:      #1a1a1a;
+      --border:    #272727;
+      --accent:    #FF8C00;
+      --accent-dim:#b36200;
+      --text:      #e8e8e8;
+      --muted:     #888;
+      --mono:      'Space Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 60px;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-home {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-home:hover { color: var(--accent); }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 24px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(ellipse at center, rgba(255,140,0,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+      display: block;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: clamp(32px, 5vw, 56px);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero-sub {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 480px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border), transparent);
+    }
+
+    /* STEPS */
+    .steps-section {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: clamp(22px, 3vw, 32px);
+      letter-spacing: -0.02em;
+      margin-bottom: 40px;
+      line-height: 1.2;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 32px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      background: rgba(255,140,0,0.1);
+      border: 1px solid var(--accent-dim);
+      border-radius: 4px;
+      padding: 4px 10px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-content h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .step-content p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .step-content p strong {
+      color: var(--text);
+    }
+
+    /* EMAIL PREVIEW CARD */
+    .email-preview {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 16px;
+    }
+
+    .email-preview-header {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .email-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    .email-row:last-child { border-bottom: none; }
+
+    .email-row-icon { font-size: 18px; flex-shrink: 0; }
+
+    .email-row-label {
+      color: var(--muted);
+      width: 140px;
+      flex-shrink: 0;
+    }
+
+    .email-row-value { color: var(--text); }
+
+    .email-row-value .highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* KEY DISPLAY */
+    .key-display {
+      background: var(--card);
+      border: 1px solid var(--accent-dim);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .key-icon { font-size: 22px; flex-shrink: 0; }
+
+    .key-text {
+      font-family: var(--mono);
+      font-size: 15px;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+    }
+
+    .key-label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ACTIVATION STEPS */
+    .activation-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 16px;
+    }
+
+    .activation-step {
+      display: flex;
+      gap: 12px;
+      padding: 8px 0;
+      font-size: 14px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .activation-step:last-child { border-bottom: none; }
+
+    .activation-step-num {
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* SUPPORT */
+    .support-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .support-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .support-card p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .support-card a {
+      font-family: var(--mono);
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 15px;
+    }
+    .support-card a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .email-row-label { width: 100px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="/">BRKBEATS</a>
+    <a class="nav-home" href="/">← Back to site</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="hero-icon">🎛</span>
+    <h1>You're all set.<br><span>Here's what happens next.</span></h1>
+    <p class="hero-sub">Your purchase is confirmed. Follow these steps to get your app downloaded and activated.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- STEPS -->
+  <div class="steps-section">
+    <p class="section-label">Next Steps</p>
+    <h2 class="section-title">Download, install, and activate.</h2>
+
+    <!-- STEP 1 -->
+    <div class="step">
+      <span class="step-num">01</span>
+      <div class="step-content">
+        <h3>Check your email</h3>
+        <p>Creem just sent you a purchase confirmation email. It contains your <strong>download link</strong> and your <strong>license key</strong>. Look for an email from Creem — if you don't see it, check your spam folder.</p>
+        <div class="email-preview">
+          <div class="email-preview-header">What the email contains</div>
+          <div class="email-row">
+            <span class="email-row-icon">⬇️</span>
+            <span class="email-row-label">Download link</span>
+            <span class="email-row-value"><span class="highlight">Download File</span> — click this to get your installer</span>
+          </div>
+          <div class="email-row">
+            <span class="email-row-icon">🔑</span>
+            <span class="email-row-label">License key</span>
+            <span class="email-row-value">Your unique activation code — keep this safe</span>
+          </div>
+          <div class="email-row">
+            <span class="email-row-icon">🧾</span>
+            <span class="email-row-label">Receipt</span>
+            <span class="email-row-value">Order number and payment confirmation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step">
+      <span class="step-num">02</span>
+      <div class="step-content">
+        <h3>Download and run the installer</h3>
+        <p>Click <strong>Download File</strong> in your email. You'll get a zip file containing both the Mac and Windows installers plus the Start Here PDF. Run the installer for your platform.</p>
+        <div class="email-preview" style="margin-top:16px;">
+          <div class="email-preview-header">Inside the zip</div>
+          <div class="email-row">
+            <span class="email-row-icon">🍎</span>
+            <span class="email-row-label">Mac</span>
+            <span class="email-row-value">SP-404MK2_Effects_Mac_Setup.pkg</span>
+          </div>
+          <div class="email-row">
+            <span class="email-row-icon">🪟</span>
+            <span class="email-row-label">Windows</span>
+            <span class="email-row-value">SP-404MK2_Effects_Windows_Setup.exe</span>
+          </div>
+          <div class="email-row">
+            <span class="email-row-icon">📄</span>
+            <span class="email-row-label">Guide</span>
+            <span class="email-row-value">SP404MK2 Effects Start Here.pdf</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step">
+      <span class="step-num">03</span>
+      <div class="step-content">
+        <h3>Launch and enter your license key</h3>
+        <p>The first time you launch the app or plugin, you'll see an activation screen. Copy your license key from the email and paste it in.</p>
+        <div class="key-display">
+          <span class="key-icon">🔑</span>
+          <div>
+            <div class="key-text">XXXX-XXXX-XXXX-XXXX-XXXX</div>
+            <div class="key-label">Your unique key is in your purchase email</div>
+          </div>
+        </div>
+        <div class="activation-card">
+          <div class="activation-step">
+            <span class="activation-step-num">01</span>
+            <span>Launch the Standalone app or load the plugin in your DAW</span>
+          </div>
+          <div class="activation-step">
+            <span class="activation-step-num">02</span>
+            <span>Paste your license key into the activation field</span>
+          </div>
+          <div class="activation-step">
+            <span class="activation-step-num">03</span>
+            <span>Click <strong style="color:var(--text)">Activate</strong> — requires an internet connection the first time only</span>
+          </div>
+          <div class="activation-step">
+            <span class="activation-step-num">04</span>
+            <span>Done — the license is stored locally. No internet needed for future sessions.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step">
+      <span class="step-num">04</span>
+      <div class="step-content">
+        <h3>Connect your SP-404MK2</h3>
+        <p>Plug in via USB, turn on the hardware, and in the app's <strong>Options</strong> menu set both the MIDI Input and MIDI Output to <strong>SP-404MKII</strong>. Both directions must be set for the bidirectional knob control to work.</p>
+      </div>
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="support-card">
+      <h3>Need help?</h3>
+      <p>Can't find your email? Key not activating? Something not working right? Reach out directly — it's just me on the other end and I'll get back to you as fast as I can.</p>
+      <a href="mailto:support@brkbeats.dev">support@brkbeats.dev</a>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">BRKBEATS</div>
+    <p>Built by an independent developer in Austin, Texas.</p>
+    <p style="margin-top:8px;"><a href="mailto:support@brkbeats.dev">support@brkbeats.dev</a></p>
+    <p style="margin-top:20px; font-size:12px;">© 2026 Brkbeats. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
