@@ -36,7 +36,6 @@
       min-height: 100vh;
     }
 
-    /* NAV */
     nav {
       position: sticky;
       top: 0;
@@ -70,7 +69,6 @@
     }
     .nav-home:hover { color: var(--accent); }
 
-    /* HERO */
     .hero {
       text-align: center;
       padding: 80px 24px 48px;
@@ -90,12 +88,7 @@
       pointer-events: none;
     }
 
-    .hero-icon {
-      font-size: 48px;
-      margin-bottom: 20px;
-      display: block;
-      position: relative;
-    }
+    .hero-icon { font-size: 48px; margin-bottom: 20px; display: block; position: relative; }
 
     .hero h1 {
       font-family: 'Space Grotesk', sans-serif;
@@ -123,7 +116,6 @@
       background: linear-gradient(to right, transparent, var(--border), transparent);
     }
 
-    /* STEPS */
     .steps-section {
       max-width: 720px;
       margin: 0 auto;
@@ -182,88 +174,52 @@
       line-height: 1.65;
     }
 
-    .step-content p strong {
-      color: var(--text);
-    }
+    .step-content p strong { color: var(--text); }
 
-    /* EMAIL PREVIEW CARD */
-    .email-preview {
+    .info-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 24px;
-      margin-top: 16px;
+      padding: 20px 24px;
+      margin-top: 14px;
     }
 
-    .email-preview-header {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    .email-row {
+    .info-row {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 12px;
       padding: 10px 0;
       border-bottom: 1px solid var(--border);
       font-size: 14px;
     }
 
-    .email-row:last-child { border-bottom: none; }
+    .info-row:last-child { border-bottom: none; }
+    .info-row-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .info-row-text { color: var(--muted); line-height: 1.5; }
+    .info-row-text strong { color: var(--text); }
+    .info-row-text .highlight { color: var(--accent); font-weight: 600; }
 
-    .email-row-icon { font-size: 18px; flex-shrink: 0; }
-
-    .email-row-label {
-      color: var(--muted);
-      width: 140px;
-      flex-shrink: 0;
-    }
-
-    .email-row-value { color: var(--text); }
-
-    .email-row-value .highlight {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    /* KEY DISPLAY */
     .key-display {
       background: var(--card);
       border: 1px solid var(--accent-dim);
       border-radius: 8px;
       padding: 20px 24px;
-      margin-top: 16px;
+      margin-top: 14px;
       display: flex;
       align-items: center;
       gap: 14px;
     }
 
     .key-icon { font-size: 22px; flex-shrink: 0; }
+    .key-text { font-family: var(--mono); font-size: 15px; color: var(--accent); letter-spacing: 0.08em; }
+    .key-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
 
-    .key-text {
-      font-family: var(--mono);
-      font-size: 15px;
-      color: var(--accent);
-      letter-spacing: 0.08em;
-    }
-
-    .key-label {
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-
-    /* ACTIVATION STEPS */
     .activation-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 24px;
-      margin-top: 16px;
+      padding: 20px 24px;
+      margin-top: 14px;
     }
 
     .activation-step {
@@ -285,7 +241,6 @@
       margin-top: 2px;
     }
 
-    /* SUPPORT */
     .support-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -302,11 +257,7 @@
       margin-bottom: 10px;
     }
 
-    .support-card p {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
+    .support-card p { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
 
     .support-card a {
       font-family: var(--mono);
@@ -316,7 +267,6 @@
     }
     .support-card a:hover { text-decoration: underline; }
 
-    /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
       padding: 40px 24px;
@@ -331,34 +281,20 @@
       margin-bottom: 12px;
     }
 
-    footer p {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-
-    footer a {
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    footer p { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
     footer a:hover { color: var(--accent); }
 
-    @media (max-width: 600px) {
-      nav { padding: 0 20px; }
-      .email-row-label { width: 100px; }
-    }
+    @media (max-width: 600px) { nav { padding: 0 20px; } }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <a class="nav-logo" href="/">BRKBEATS</a>
     <a class="nav-home" href="/">← Back to site</a>
   </nav>
 
-  <!-- HERO -->
   <div class="hero">
     <span class="hero-icon">🎛</span>
     <h1>You're all set.<br><span>Here's what happens next.</span></h1>
@@ -367,7 +303,6 @@
 
   <div class="divider"></div>
 
-  <!-- STEPS -->
   <div class="steps-section">
     <p class="section-label">Next Steps</p>
     <h2 class="section-title">Download, install, and activate.</h2>
@@ -376,26 +311,8 @@
     <div class="step">
       <span class="step-num">01</span>
       <div class="step-content">
-        <h3>Check your email</h3>
-        <p>Creem just sent you a purchase confirmation email. It contains your <strong>download link</strong> and your <strong>license key</strong>. Look for an email from Creem — if you don't see it, check your spam folder.</p>
-        <div class="email-preview">
-          <div class="email-preview-header">What the email contains</div>
-          <div class="email-row">
-            <span class="email-row-icon">⬇️</span>
-            <span class="email-row-label">Download link</span>
-            <span class="email-row-value"><span class="highlight">Download File</span> — click this to get your installer</span>
-          </div>
-          <div class="email-row">
-            <span class="email-row-icon">🔑</span>
-            <span class="email-row-label">License key</span>
-            <span class="email-row-value">Your unique activation code — keep this safe</span>
-          </div>
-          <div class="email-row">
-            <span class="email-row-icon">🧾</span>
-            <span class="email-row-label">Receipt</span>
-            <span class="email-row-value">Order number and payment confirmation</span>
-          </div>
-        </div>
+        <h3>Check your email from Creem</h3>
+        <p>Creem just sent you a purchase confirmation email. In that email, click the purple <strong>Download File</strong> link — this takes you to your Creem order page. If you don't see the email, check your spam folder.</p>
       </div>
     </div>
 
@@ -403,24 +320,20 @@
     <div class="step">
       <span class="step-num">02</span>
       <div class="step-content">
-        <h3>Download and run the installer</h3>
-        <p>Click <strong>Download File</strong> in your email. You'll get a zip file containing both the Mac and Windows installers plus the Start Here PDF. Run the installer for your platform.</p>
-        <div class="email-preview" style="margin-top:16px;">
-          <div class="email-preview-header">Inside the zip</div>
-          <div class="email-row">
-            <span class="email-row-icon">🍎</span>
-            <span class="email-row-label">Mac</span>
-            <span class="email-row-value">SP-404MK2_Effects_Mac_Setup.pkg</span>
+        <h3>Find your download and license key on the Creem order page</h3>
+        <p>On the Creem order page, click <strong>SP-404MK2 Effects Controller</strong> under <strong>Orders</strong> on the left side. The right side will open showing everything you need.</p>
+        <div class="info-card">
+          <div class="info-row">
+            <span class="info-row-icon">🔑</span>
+            <div class="info-row-text"><strong>License Key</strong> — your unique activation code. Copy it, you'll need it when you first launch the app.</div>
           </div>
-          <div class="email-row">
-            <span class="email-row-icon">🪟</span>
-            <span class="email-row-label">Windows</span>
-            <span class="email-row-value">SP-404MK2_Effects_Windows_Setup.exe</span>
+          <div class="info-row">
+            <span class="info-row-icon">⬇️</span>
+            <div class="info-row-text"><strong>Files</strong> — click the download icon next to <span class="highlight">SP-404MK2 Effects.zip</span> to get your installer.</div>
           </div>
-          <div class="email-row">
-            <span class="email-row-icon">📄</span>
-            <span class="email-row-label">Guide</span>
-            <span class="email-row-value">SP404MK2 Effects Start Here.pdf</span>
+          <div class="info-row">
+            <span class="info-row-icon">📄</span>
+            <div class="info-row-text"><strong>Inside the zip</strong> — Mac installer (.pkg), Windows installer (.exe), and the Start Here PDF guide.</div>
           </div>
         </div>
       </div>
@@ -430,13 +343,22 @@
     <div class="step">
       <span class="step-num">03</span>
       <div class="step-content">
+        <h3>Run the installer for your platform</h3>
+        <p>Extract the zip and run the installer for your OS. Mac users see the Start Here PDF for Gatekeeper bypass instructions. Windows users see it for SmartScreen instructions. Both are a one-time step.</p>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step">
+      <span class="step-num">04</span>
+      <div class="step-content">
         <h3>Launch and enter your license key</h3>
-        <p>The first time you launch the app or plugin, you'll see an activation screen. Copy your license key from the email and paste it in.</p>
+        <p>The first time you launch the app or plugin, you'll see an activation screen. Paste in the license key from your Creem order page.</p>
         <div class="key-display">
           <span class="key-icon">🔑</span>
           <div>
             <div class="key-text">XXXX-XXXX-XXXX-XXXX-XXXX</div>
-            <div class="key-label">Your unique key is in your purchase email</div>
+            <div class="key-label">Your unique key is on your Creem order page</div>
           </div>
         </div>
         <div class="activation-card">
@@ -460,12 +382,12 @@
       </div>
     </div>
 
-    <!-- STEP 4 -->
+    <!-- STEP 5 -->
     <div class="step">
-      <span class="step-num">04</span>
+      <span class="step-num">05</span>
       <div class="step-content">
         <h3>Connect your SP-404MK2</h3>
-        <p>Plug in via USB, turn on the hardware, and in the app's <strong>Options</strong> menu set both the MIDI Input and MIDI Output to <strong>SP-404MKII</strong>. Both directions must be set for the bidirectional knob control to work.</p>
+        <p>Plug in via USB, turn on the hardware, and in the app's <strong>Options</strong> menu set both the MIDI Input and MIDI Output to <strong>SP-404MKII</strong>. Both directions must be set for bidirectional knob control to work.</p>
       </div>
     </div>
 
@@ -480,7 +402,6 @@
 
   <div class="divider"></div>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-logo">BRKBEATS</div>
     <p>Built by an independent developer in Austin, Texas.</p>
