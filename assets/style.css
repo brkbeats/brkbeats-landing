@@ -570,6 +570,40 @@ section { padding: 80px 24px; max-width: 1080px; margin: 0 auto; }
   text-transform: uppercase;
 }
 
+/* Struck-out original price. Muted rather than accent so the eye lands on the
+   price being charged, not the one that isn't. */
+.price-was {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  margin-right: 14px;
+}
+
+.pricing-card .price-amount .price-was { font-size: 40px; }
+
+/* Inline variants, for the nav button and the hero where the price sits in a line
+   of text rather than on its own. */
+.btn-price .price-was,
+.nav-buy .price-was { font-size: 0.8em; margin-right: 7px; }
+
+.btn-buy-full .price-was { font-size: 0.85em; margin-right: 7px; opacity: 0.75; }
+
+/* The badge that says why the number is lower. */
+.price-note {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  border-radius: 999px;
+  padding: 5px 12px;
+  margin-top: 14px;
+}
+
 .pricing-includes {
   list-style: none;
   text-align: left;
