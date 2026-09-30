@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Overlook for Tonverk – Mac App – Brkbeats</title>
+<meta name="description" content="Overlook is a Mac app for the Elektron Tonverk: build kits, instruments, and wavetables, copy patterns between projects, and edit track knobs off the machine. macOS 11 or later, Apple silicon and Intel." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+/* Page-only: screenshot frames, and spaces held for screenshots still to come. */
+.shot { display: flex; justify-content: center; margin: 80px 0 40px 0; padding: 0 24px; }
+.shot img { width: 100%; max-width: 960px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+.shot-todo {
+  width: 100%; max-width: 960px; aspect-ratio: 16 / 10;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  border: 1px dashed var(--border); border-radius: 8px; background: var(--surface);
+  color: var(--muted); font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; padding: 24px;
+}
+.shots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.shots-grid figure { margin: 0; }
+.shots-grid img, .shots-grid .shot-todo { width: 100%; border-radius: 6px; }
+.shots-grid .shot-todo { aspect-ratio: 16 / 11; }
+.shots-grid figcaption { color: var(--muted); font-size: 14px; margin-top: 10px; }
+.shots-grid figcaption strong { color: var(--text); font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+.hero-mark { width: 72px; height: 72px; margin: 0 auto 22px; display: block; position: relative; }
+.story { max-width: 720px; }
+.story p { color: var(--muted); font-size: 15.5px; line-height: 1.75; margin-bottom: 16px; }
+.features-grid.three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .features-grid.three { grid-template-columns: 1fr; } }
+.price-rise { color: var(--muted); font-size: 14.5px; line-height: 1.6; text-align: center; margin: 4px 0 22px; }
+.disclaimer { text-align: center; color: var(--muted); font-size: 13px; font-style: italic; padding: 0 24px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+<a class="nav-logo" href="/">BRKBEATS</a>
+<div class="nav-links">
+<a class="nav-link" href="/#products">All Products</a>
+</div>
+<a class="nav-buy" href="#buy">Get Notified</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<img class="hero-mark" src="assets/overlook-brk.png" alt="brk mark" />
+<p class="hero-eyebrow">Overlook for Tonverk · Mac App</p>
+<h1>Curate your <span>card.</span></h1>
+<p class="hero-sub">
+Build kits, instruments, and wavetables. Copy patterns between projects.
+Control beyond the box.
+</p>
+<div class="hero-actions">
+<a class="btn-primary" href="#buy">Get Notified</a>
+<span class="btn-price">$49</span>
+</div>
+<div class="hero-formats">
+<span class="format-tag">Mac</span>
+<span class="format-tag">macOS 11+</span>
+<span class="format-tag">Apple Silicon</span>
+<span class="format-tag">Intel</span>
+<span class="format-tag">Elektron Tonverk</span>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SCREENSHOT: the Projects screen. Replace the placeholder with
+     <img src="assets/overlook-projects.png" alt="Overlook's Projects screen: two projects side by side, a pattern's tracks, and a track's knob pages" /> -->
+<div class="shot">
+<div class="shot-todo">SCREENSHOT TO COME — PROJECTS SCREEN</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WHY -->
+<section>
+<p class="section-label">Why I built it</p>
+<h2 class="section-title">The tool I kept wishing existed.</h2>
+<div class="story">
+<p>I love my Tonverk, and I kept wanting the same things around it: slicing loops into kits without a trip through a DAW, bringing my sampled instruments across whole, and moving a pattern from one project to another, effects and all.</p>
+<p>So I built Overlook. It works with the files on your Tonverk's card — kits, instruments, wavetables, and projects — and everything it writes is something the Tonverk loads like its own.</p>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FEATURES -->
+<section>
+<p class="section-label">What it does</p>
+<h2 class="section-title">Everything on the card,<br>from your Mac.</h2>
+<div class="features-grid three">
+<div class="feature-card">
+<span class="feature-icon">🥁</span>
+<h3>Drum Sets</h3>
+<p>Slice loops on a grid or by hand, or build factory-style kits from one-shots. Velocity layers, round robins, and a sequencer that previews the kit the way Subtracks plays it.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">🎹</span>
+<h3>Instruments</h3>
+<p>Map a folder of samples to keys, spread one-shots one per key, or turn a recording of someone playing up a scale into key zones. Sequence notes, chords, and lengths before anything goes on the card.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">📦</span>
+<h3>Instrument Imports</h3>
+<p>Converts SFZ, Decent Sampler, and Logic Sampler (EXS) instruments into .elmulti files, folding includes, defines, and keyswitches into a mapping the Tonverk loads. Batch-convert a whole folder.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">🌊</span>
+<h3>Wavetables</h3>
+<p>Nine generators plus extraction from your own samples, always saved with the <code>_wt</code> filename the Tonverk reads the wave size from.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">🔁</span>
+<h3>Pattern Copy</h3>
+<p>Open two projects side by side, see every pattern and track, and copy a pattern with its trigs, locks, conditions, machines, and effects — within a project or into another one.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">🎛</span>
+<h3>Track Knobs</h3>
+<p>Read a track's TRIG, SRC, FLTR, AMP, FX, and MOD pages laid out as on the machine, in the same units. Change values on the Mac and write them back.</p>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MORE SCREENSHOTS. Replace each placeholder with
+     <img src="assets/overlook-drumset.png" …>, overlook-instrument.png, overlook-wavetable.png -->
+<section>
+<p class="section-label">A closer look</p>
+<h2 class="section-title">One app for every kind<br>of file the Tonverk loads.</h2>
+<div class="shots-grid">
+<figure>
+<div class="shot-todo">SCREENSHOT TO COME — DRUM SET</div>
+<figcaption><strong>Drum sets</strong> — a loop sliced across a pad, sequenced as Subtracks.</figcaption>
+</figure>
+<figure>
+<div class="shot-todo">SCREENSHOT TO COME — INSTRUMENT</div>
+<figcaption><strong>Instruments</strong> — samples on keys, velocity layers, notes and chords.</figcaption>
+</figure>
+<figure>
+<div class="shot-todo">SCREENSHOT TO COME — WAVETABLE</div>
+<figcaption><strong>Wavetables</strong> — generated or taken from a sample, named correctly.</figcaption>
+</figure>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CARD -->
+<section>
+<p class="section-label">Works with your card</p>
+<h2 class="section-title">Opens what's already there.</h2>
+<div class="how-grid">
+<div class="how-step">
+<p class="step-num">OPEN</p>
+<h3>Your kits, factory ones too</h3>
+<p>Open any .eldrum or .elmulti on the card to see and hear every region. Tested on a full card: 265 of 266 kits read back identical, field for field.</p>
+</div>
+<div class="how-step">
+<p class="step-num">SEND</p>
+<h3>Straight to the card</h3>
+<p>Send a kit to the card, or make a new project with it on a track and the pattern already in it — ready to load.</p>
+</div>
+<div class="how-step">
+<p class="step-num">COPY</p>
+<h3>Patterns between projects</h3>
+<p>The kits, instruments, samples, and wavetables a pattern uses come with it, shared with the target project where it already has them.</p>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SAFETY -->
+<section>
+<p class="section-label">Safety first</p>
+<h2 class="section-title">Your projects come first.</h2>
+<div class="features-grid">
+<div class="feature-card">
+<span class="feature-icon">💾</span>
+<h3>Backed Up First</h3>
+<p>Anything that writes into a project backs the whole project up to your Mac before it touches it.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">✋</span>
+<h3>Asks Before Replacing</h3>
+<p>Nothing on the card is overwritten without asking — and it names every project that uses a kit before you replace it.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">✅</span>
+<h3>Checked Before Writing</h3>
+<p>Projects are checked before every write. A damaged one is flagged, never written to, and can be rebuilt as a new project.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">⏏️</span>
+<h3>Safe to Eject</h3>
+<p>Everything is flushed to the card, and the app tells you when it's actually safe to eject.</p>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRICING / NOTIFY -->
+<section id="buy">
+<p class="section-label">Pricing</p>
+<h2 class="section-title" style="text-align:center;">Launching soon.</h2>
+<div class="pricing-card">
+<div class="price-amount">$49</div>
+<div class="price-label">One-time purchase — no subscription</div>
+<div class="price-note">Launch price</div>
+<p class="price-rise">Overlook is early and growing every week, and the price will go up as it does.<br>Get in now and the complete project workflow comes to you as a free update.</p>
+<ul class="pricing-includes">
+<li>Mac app for Apple silicon &amp; Intel</li>
+<li>macOS 11 Big Sur or later</li>
+<li>Drum sets, instruments, wavetables &amp; projects</li>
+<li>The completed project workflow, free</li>
+</ul>
+<a class="btn-notify-full" href="mailto:support@brkbeats.dev?subject=Notify me when Overlook launches">Notify Me at Launch</a>
+<p class="pricing-note">Overlook is in beta. Drop me a line and I'll let you know the moment it's live. Windows is on the list, but it isn't ready yet.</p>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MORE FROM BRKBEATS -->
+<section>
+<p class="section-label">More From Brkbeats</p>
+<h2 class="section-title">Other tools for producers.</h2>
+<div class="products-grid">
+<a class="product-card" href="sp404-effects-controller.html">
+<div class="product-thumb">
+<img src="assets/SP-404MK2 Effects1.png" alt="SP-404MK2 Effects Controller interface" />
+</div>
+<div class="product-body">
+<p class="product-eyebrow">Roland SP-404MK2 Companion</p>
+<h3>SP-404MK2 Effects Controller</h3>
+<p>Real-time control and MIDI CC automation for every effect on your SP-404MK2.</p>
+<div class="product-footer">
+<span class="product-price">$29</span>
+<span class="product-cta">View Product →</span>
+</div>
+</div>
+</a>
+<a class="product-card" href="ottava.html">
+<div class="product-thumb">
+<img src="assets/ottava.png" alt="Ottava polyphonic synthesizer interface" />
+</div>
+<div class="product-body">
+<p class="product-eyebrow">Synthesizer</p>
+<h3>Ottava</h3>
+<p>A polyphonic synth built around analog-modeled oscillators and filtering, with microtonal scale support baked in.</p>
+<div class="product-footer">
+<span class="product-price">$29</span>
+<span class="product-cta">View Product →</span>
+</div>
+</div>
+</a>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<p class="disclaimer">Overlook is an independent app and isn't affiliated with or endorsed by Elektron.</p>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-logo">BRKBEATS</div>
+<p>Built by an independent developer in Austin, Texas.</p>
+<p style="margin-top:8px;">
+<a href="mailto:support@brkbeats.dev">support@brkbeats.dev</a>
+</p>
+<p style="margin-top: 14px; font-size: 13px; word-spacing: 6px;">
+<a href="/refund.html">Refund Policy</a> |
+<a href="/privacy.html">Privacy Policy</a> |
+<a href="/terms.html">Terms of Service</a>
+</p>
+<p style="margin-top:20px; font-size:12px;">© 2026 Brkbeats. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
