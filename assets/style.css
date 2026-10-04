@@ -620,6 +620,9 @@ section { padding: 80px 24px; max-width: 1080px; margin: 0 auto; }
   margin-top: 14px;
 }
 
+.pricing-card .price-note { margin-bottom: 38px; }
+.hero-price-note { margin-top: 20px; position: relative; }
+
 .pricing-includes {
   list-style: none;
   text-align: left;
