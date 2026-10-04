@@ -715,6 +715,9 @@ section { padding: 80px 24px; max-width: 1080px; margin: 0 auto; }
 
 .coming-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
+a.coming-card { display: block; text-decoration: none; transition: border-color 0.2s, transform 0.15s; }
+a.coming-card:hover { border-color: var(--accent-dim); transform: translateY(-2px); }
+
 /* ── FOOTER ── */
 footer {
   border-top: 1px solid var(--border);
