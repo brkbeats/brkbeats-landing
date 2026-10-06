@@ -739,6 +739,16 @@ a.coming-card:hover { border-color: var(--accent-dim); transform: translateY(-2p
 
 .disclaimer { text-align: center; color: var(--muted); font-size: 13px; font-style: italic; line-height: 1.6; max-width: 1080px; margin: 0 auto; padding: 32px 24px 40px; box-sizing: border-box; }
 
+.faq { max-width: 760px; }
+.faq-item { padding: 22px 0; border-bottom: 1px solid var(--border); }
+.faq-item:first-child { padding-top: 4px; }
+.faq-item h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 18px; color: var(--text); margin-bottom: 8px; }
+.faq-item p, .faq-item li { font-size: 15px; color: var(--muted); line-height: 1.7; }
+.faq-item p + p, .faq-item ol + p { margin-top: 10px; }
+.faq-item ol { margin: 10px 0 0 1.3em; }
+.faq-item li { margin: 4px 0; }
+.faq-item strong { color: var(--text); }
+
 /* ── FOOTER ── */
 footer {
   border-top: 1px solid var(--border);

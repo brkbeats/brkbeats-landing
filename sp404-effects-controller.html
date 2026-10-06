@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/style.css?v=4" />
+<link rel="stylesheet" href="assets/style.css?v=5" />
 </head>
 <body>
 
@@ -174,6 +174,54 @@ needed once, to activate.
 <strong style="color: var(--text);">Tested with DOOM OS 0.6-alpha</strong>, the custom SP-404MKII firmware from
 Klangfeld Labs. Effects, automation, LFOs, presets and tempo sync all work alongside its sequencer.
 </p>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ: HOW IT CONNECTS -->
+<section id="connect">
+<p class="section-label">FAQ</p>
+<h2 class="section-title">How does it connect?</h2>
+<div class="faq">
+<div class="faq-item">
+<h3>What do I need?</h3>
+<p>An SP-404MKII and one USB cable that carries data. Some cables only charge. Nothing else: no MIDI interface, no audio interface, no 1/4" cables.</p>
+</div>
+<div class="faq-item">
+<h3>Do I need a DAW?</h3>
+<p>No. The standalone app controls the SP-404's effects directly, on whatever the 404 is playing: pads, its own sequencer, DOOM OS, or a source plugged into its input. Open the app and it finds the SP-404 by itself.</p>
+</div>
+<div class="faq-item">
+<h3>Do I have to set up MIDI?</h3>
+<p>No. The app finds your SP-404 over USB and talks to it directly. There's no MIDI track, no external instrument and no channel setup.</p>
+</div>
+<div class="faq-item">
+<h3>How does it work in a DAW?</h3>
+<p>The SP-404 also works as a USB audio interface, so a track can go out to it, through its effects, and back over the same cable:</p>
+<ol>
+<li>Put <strong>SP-404MK2 Effects</strong> on an <strong>aux bus</strong>, as an audio effect.</li>
+<li>Add your DAW's external-hardware insert to the same bus, set to the SP-404. In Logic that's the <strong>I/O</strong> plugin; in Ableton, <strong>External Audio Effect</strong>.</li>
+<li>Send any track to that bus, and turn <strong>input monitoring</strong> on.</li>
+</ol>
+<p>The plugin passes audio through untouched, so what you hear is the SP-404's own effects. Every parameter can be automated in your DAW.</p>
+</div>
+<div class="faq-item">
+<h3>Can I use it on more than one track?</h3>
+<p>Use <strong>one instance, on one aux bus</strong>, and send whichever tracks you want to it. The SP-404 is a single piece of hardware, so several copies of the plugin would fight over it.</p>
+</div>
+<div class="faq-item">
+<h3>I can't find the plugin in my DAW.</h3>
+<p>Look under <strong>audio effects</strong>, not instruments. It's filed under the maker name <strong>brkbeats</strong>, which some DAWs sort to the bottom of the list.</p>
+</div>
+<div class="faq-item">
+<h3>Does it work with DOOM OS?</h3>
+<p>Yes. It's tested with DOOM OS 0.6-alpha, and it works on the stock firmware too.</p>
+</div>
+<div class="faq-item">
+<h3>iPad or iPhone?</h3>
+<p>Not yet. Mac and Windows only for now.</p>
+</div>
+</div>
 </section>
 
 <div class="divider"></div>
