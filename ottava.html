@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ottava – Synthesizer – Brkbeats</title>
-<meta name="description" content="Ottava is a polyphonic synthesizer with analog-modeled oscillators, a zero-delay feedback filter, and built-in microtonal scale support. Standalone, VST3, and AU for Mac and Windows." />
+<meta name="description" content="Ottava is a polyphonic synthesizer that shows you what it's doing: a built-in scope, 82 presets that teach, random sounds by type, one-click rendering of one-shots and sample packs, and microtonal tuning. Standalone, VST3 and AU for Mac and Windows." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
@@ -24,11 +24,11 @@
 <!-- HERO -->
 <div class="hero">
 <p class="hero-eyebrow">Polyphonic Synthesizer</p>
-<h1>A synth built on <span>oscillators</span>, not presets.</h1>
+<h1>A synth that <span>shows you</span> what it's doing.</h1>
 <p class="hero-sub">
-Ottava pairs analog-modeled oscillators with a zero-delay feedback filter and
-genuinely useful microtonal scale support — for producers who want to shape
-sound, not just browse it.
+Ottava is an 8-voice analog-style synth with a built-in scope, so you can see every change
+you hear. Learn synthesis one knob at a time, roll random sounds by type, and render your
+own one-shots and sample packs in a click.
 </p>
 <div class="hero-actions">
 <a class="btn-primary" href="#buy">Get Notified</a>
@@ -48,8 +48,8 @@ sound, not just browse it.
 <div style="display: flex; justify-content: center; margin: 80px 0 40px 0;">
 <img
 src="assets/ottava.png"
-alt="Ottava polyphonic synthesizer interface"
-style="width: 100%; max-width: 760px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+alt="Ottava synthesizer interface, with the scope in the centre of the panel"
+style="width: 100%; max-width: 960px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
 </div>
 
 <div class="divider"></div>
@@ -57,27 +57,47 @@ style="width: 100%; max-width: 760px; border-radius: 8px; box-shadow: 0 4px 12px
 <!-- FEATURES -->
 <section>
 <p class="section-label">What it does</p>
-<h2 class="section-title">Analog modeling, tuned for<br>real playability.</h2>
+<h2 class="section-title">See it, hear it, keep it.</h2>
 <div class="features-grid">
 <div class="feature-card">
-<span class="feature-icon">🌊</span>
-<h3>PolyBLEP Oscillators</h3>
-<p>Band-limited oscillator cores for clean, alias-free waveforms across the full keyboard range.</p>
+<span class="feature-icon">📈</span>
+<h3>A Scope That Teaches</h3>
+<p>Five views: each oscillator on its own, the finished sound, the filter's frequencies with the cutoff marked, and the envelope with a dot following every note. Turn a knob and watch what changes.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">💡</span>
+<h3>82 Presets That Point the Way</h3>
+<p>Bass, lead, pad, keys, pluck, FX, drone and a full drum kit, all set to the same loudness. Every preset names the knob to try first, and the Tour walks through the synth one control at a time.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">🎲</span>
+<h3>Random Sounds, by Type</h3>
+<p>Click RANDOM, or the scope, for a new patch. Choose a type — kick, snare, hat, bass, pad, FX and more — and every roll stays in that lane. Undo puts the last sound back.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">💾</span>
+<h3>Render One-Shots and Sample Packs</h3>
+<p>One click saves the current sound as a WAV, trimmed and normalised. Or render 10, 20 or 50 random kicks at once, each with its preset beside it. 24-bit at 44.1, 48 or 96 kHz.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">🥁</span>
+<h3>A Drum Kit Built In</h3>
+<p>Kicks, snare, clap, rim shot, open and closed hats, tambourine, shaker, tom, conga, cowbell, woodblock and crash. Every one is a clean one-shot, tuned and ready to play on C2.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">❓</span>
+<h3>Tips on Every Control</h3>
+<p>Rest the pointer on any knob for a line on what it does and what it will sound like. Switch the tips off once you know your way around.</p>
 </div>
 <div class="feature-card">
 <span class="feature-icon">🎛</span>
-<h3>Zero-Delay Feedback Filter</h3>
-<p>An analog-modeled ZDF filter for movement and character that holds up under heavy modulation.</p>
+<h3>Analog-Style Sound</h3>
+<p>Two band-limited oscillators with six waveforms, a sub and four colours of noise. A diode low-pass plus four more filter types, a tunable comb filter, two LFOs, and stereo unison.</p>
 </div>
 <div class="feature-card">
 <span class="feature-icon">🎹</span>
-<h3>8-Voice Polyphony</h3>
-<p>Full ADSR with velocity scaling per voice, plus glide and pitch bend for expressive playing.</p>
-</div>
-<div class="feature-card">
-<span class="feature-icon">🎚</span>
-<h3>Deep MIDI Learn</h3>
-<p>Right-click any control to assign it to a MIDI CC — thread-safe and reliable under fast automation.</p>
+<h3>Plays Like an Instrument</h3>
+<p>Eight voices, velocity, sustain pedal, mod-wheel vibrato and pitch bend. Unison plays legato and glides between overlapping notes. Right-click any control to assign a MIDI knob.</p>
 </div>
 </div>
 </section>
@@ -87,24 +107,42 @@ style="width: 100%; max-width: 760px; border-radius: 8px; box-shadow: 0 4px 12px
 <!-- MICROTONAL -->
 <section>
 <p class="section-label">Tuning</p>
-<h2 class="section-title">Built-in microtonal scale support.</h2>
+<h2 class="section-title">Built-in microtonal tuning.</h2>
 <div class="how-grid">
 <div class="how-step">
 <p class="step-num">SCALE</p>
 <h3>19-EDO</h3>
-<p>19 equal divisions of the octave, for xenharmonic textures beyond standard 12-tone tuning.</p>
+<p>19 equal steps to the octave, for lush thirds and xenharmonic textures beyond standard 12-tone tuning.</p>
 </div>
 <div class="how-step">
 <p class="step-num">SCALE</p>
 <h3>22-EDO</h3>
-<p>22 equal divisions of the octave — a different flavor of xenharmonic tuning, ready out of the box.</p>
+<p>22 equal steps to the octave — a brighter, stranger flavor of xenharmonic tuning, ready out of the box.</p>
 </div>
 <div class="how-step">
 <p class="step-num">SCALE</p>
 <h3>Just Intonation</h3>
-<p>Pure-ratio tuning for drones, pads, and anything that benefits from natural harmonic relationships.</p>
+<p>Pure-ratio tuning: chords in C ring without beating. Made for drones, pads and anything that leans on natural harmonics.</p>
 </div>
 </div>
+<p style="color: var(--muted); font-size: 15px; max-width: 720px; margin-top: 36px;">
+The tuning stays where you put it, so you can play every preset in 19-EDO, 22-EDO or Just Intonation.
+Four presets are built on these tunings to get you started, and the guide shows the chord shapes for each.
+</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- YOUR SOUNDS -->
+<section>
+<p class="section-label">Your sounds</p>
+<h2 class="section-title">The sounds you make are yours.</h2>
+<p style="color: var(--muted); font-size: 15px; max-width: 720px;">
+Anything you record or render with Ottava belongs to you, royalty-free — including sounds made from the
+factory presets and the randomiser. Use them in your own music, or sell and share samples, one-shots and
+sample packs made with it. No credit required. The only thing this doesn't cover is Ottava itself: the plugin
+and its factory preset files.
+</p>
 </section>
 
 <div class="divider"></div>
@@ -117,24 +155,29 @@ style="width: 100%; max-width: 760px; border-radius: 8px; box-shadow: 0 4px 12px
 <div class="format-card">
 <span class="fmt-icon">🖥</span>
 <h3>Standalone — Mac</h3>
-<p>No DAW required. Play and sound-design on its own.</p>
+<p>No DAW required. Play, learn and render on its own.</p>
 </div>
 <div class="format-card">
 <span class="fmt-icon">🖥</span>
 <h3>Standalone — Windows</h3>
-<p>Full Windows 10/11 support out of the box.</p>
+<p>For 64-bit Windows 10 and 11.</p>
 </div>
 <div class="format-card">
 <span class="fmt-icon">🔌</span>
 <h3>VST3 — Mac & Windows</h3>
-<p>Works in any VST3-compatible DAW. Full automation support.</p>
+<p>Works in any VST3-compatible DAW. Every control is automatable.</p>
 </div>
 <div class="format-card">
 <span class="fmt-icon">🍎</span>
 <h3>AU — Mac</h3>
-<p>Native Audio Unit for Logic Pro with full MIDI routing.</p>
+<p>Native Audio Unit instrument for Logic Pro, with the factory presets in Logic's own preset menu.</p>
 </div>
 </div>
+<p style="color: var(--muted); font-size: 15px; max-width: 720px; margin-top: 36px;">
+<strong style="color: var(--text);">What you need:</strong> <strong style="color: var(--text);">macOS 12 Monterey or later</strong>
+on Intel or Apple Silicon (the Mac build is universal), or <strong style="color: var(--text);">64-bit Windows 10 or later</strong>.
+A MIDI keyboard is recommended but not required. An internet connection is needed once, to activate.
+</p>
 </section>
 
 <div class="divider"></div>
@@ -150,8 +193,11 @@ style="width: 100%; max-width: 760px; border-radius: 8px; box-shadow: 0 4px 12px
 <li>Standalone App for Mac &amp; Windows</li>
 <li>VST3 Plugin for Mac &amp; Windows</li>
 <li>Audio Unit (AU) Plugin for Mac</li>
-<li>License key valid for one machine</li>
+<li>82 factory presets, including a drum kit</li>
+<li>License key valid for three machines</li>
+<li>One activation, then never again — no periodic checks</li>
 <li>Free updates for life</li>
+<li>PDF guide included</li>
 </ul>
 <a class="btn-notify-full" href="mailto:support@brkbeats.dev?subject=Notify me when Ottava launches">Notify Me at Launch</a>
 <p class="pricing-note">Ottava is in final development. Drop your email and I'll let you know the moment it's live.</p>
