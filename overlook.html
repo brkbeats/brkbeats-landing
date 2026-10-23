@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Overlook for Tonverk – Mac App – Brkbeats</title>
-<meta name="description" content="Overlook is a Mac app for the Elektron Tonverk: build kits, instruments, and wavetables, copy patterns between projects, and edit track knobs off the machine. macOS 11 or later, Apple silicon and Intel." />
+<title>Overlook for Tonverk – Mac &amp; Windows App – Brkbeats</title>
+<meta name="description" content="Overlook is a Mac and Windows app for the Elektron Tonverk: build drum sets, instruments, and wavetables, sequence them, and send them straight to the card. Any Mac from 2015 on (macOS 11 or later) and Windows 10 or 11." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
@@ -31,6 +31,8 @@
 .features-grid.three { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 900px) { .features-grid.three { grid-template-columns: 1fr; } }
 .price-rise { color: var(--muted); font-size: 14.5px; line-height: 1.6; text-align: center; margin: 4px 0 22px; }
+.platform-line { color: var(--text); font-size: 16px; line-height: 1.7; max-width: 720px; }
+.needs { color: var(--muted); font-size: 15px; line-height: 1.7; max-width: 720px; margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -41,25 +43,25 @@
 <div class="nav-links">
 <a class="nav-link" href="/#products">All Products</a>
 </div>
-<a class="nav-buy" href="#buy">Get Notified</a>
+<a class="nav-buy" href="#buy">Buy Now</a>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
 <img class="hero-mark" src="assets/overlook-brk.png" alt="brk mark" />
-<p class="hero-eyebrow">Overlook for Tonverk · Mac App</p>
+<p class="hero-eyebrow">Overlook for Tonverk · Mac &amp; Windows</p>
 <h1>Curate your <span>card.</span></h1>
 <p class="hero-sub">
-Build kits, instruments, and wavetables. Copy patterns between projects.
-Control beyond the box.
+Build kits, instruments, and wavetables, sequence them, and send them straight to the card.
 </p>
 <div class="hero-actions">
-<a class="btn-primary" href="#buy">Get Notified</a>
+<a class="btn-primary" href="#buy">Buy Now</a>
 <span class="btn-price">$49</span>
 </div>
+<div class="price-note hero-price-note">Launch price through Nov 30 — then $79</div>
 <div class="hero-formats">
 <span class="format-tag">Mac</span>
-<span class="format-tag">macOS 11+</span>
+<span class="format-tag">Windows</span>
 <span class="format-tag">Apple Silicon</span>
 <span class="format-tag">Intel</span>
 <span class="format-tag">Elektron Tonverk</span>
@@ -68,11 +70,19 @@ Control beyond the box.
 
 <div class="divider"></div>
 
-<!-- SCREENSHOT: the Projects screen. Replace the placeholder with
-     <img src="assets/overlook-projects.png" alt="Overlook's Projects screen: two projects side by side, a pattern's tracks, and a track's knob pages" /> -->
+<!-- Screenshots: the 2026-10-22 build, 1320-point window at 2x, shown at 1920 wide. The kit is loops
+     built from Steve's BrkbeatsKit hits; the instrument is Ottava_MultiOne. -->
 <div class="shot">
-<img src="assets/overlook-screenshot.png" alt="Overlook's Drum set screen: a loop sliced across pad C and sequenced as trigs" />
+<img src="assets/overlook-drumset.png" alt="Overlook's Drum set screen: a break sliced at its hits on pad C, five pads loaded, and the slices sequenced as trigs over two bars" />
 </div>
+
+<!-- VIDEO: once the launch video is up, put it here, as the Ottava page does:
+<div style="max-width: 960px; margin: 40px auto 0; padding: 0 24px;">
+<div style="position: relative; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+<iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="…" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+</div>
+</div>
+-->
 
 <div class="divider"></div>
 
@@ -82,7 +92,7 @@ Control beyond the box.
 <h2 class="section-title">The tool I kept wishing existed.</h2>
 <div class="story">
 <p>I love my Tonverk, and I kept wanting the same things around it: slicing loops into kits without a trip through a DAW, bringing my sampled instruments across whole, and moving a pattern from one project to another, effects and all.</p>
-<p>So I built Overlook. It works with the files on your Tonverk's card — kits, instruments, wavetables, and projects — and everything it writes is something the Tonverk loads like its own.</p>
+<p>So I built Overlook. It works with the files on your Tonverk's card — kits, instruments, wavetables, and projects — and everything it writes is something the Tonverk loads like its own. It runs on the Mac or the PC you already have.</p>
 </div>
 </section>
 
@@ -91,59 +101,53 @@ Control beyond the box.
 <!-- FEATURES -->
 <section>
 <p class="section-label">What it does</p>
-<h2 class="section-title">Everything on the card,<br>from your Mac.</h2>
+<h2 class="section-title">Everything the Tonverk loads,<br>from your computer.</h2>
 <div class="features-grid three">
 <div class="feature-card">
 <span class="feature-icon">🥁</span>
 <h3>Drum Sets</h3>
-<p>Slice loops on a grid or by hand, or build factory-style kits from one-shots. Velocity layers, round robins, and a sequencer that previews the kit the way Subtracks plays it.</p>
+<p>Slice a loop on a grid, at its hits, or by hand, and the pattern plays it back with its feel. Or build kits from one-shots, with velocity layers and round robins. The preview plays the kit the way Subtracks does.</p>
 </div>
 <div class="feature-card">
 <span class="feature-icon">🎹</span>
 <h3>Instruments</h3>
-<p>Map a folder of samples to keys, spread one-shots one per key, or turn a recording of someone playing up a scale into key zones. Sequence notes, chords, and lengths before anything goes on the card.</p>
+<p>Map a folder of samples to keys, every one measured and played in tune. Line up attacks, trim the silence off tails, and find sustain loops so held notes keep sounding. On a Mac, Auto-sample plays your synth over MIDI and maps what comes back.</p>
 </div>
 <div class="feature-card">
 <span class="feature-icon">📦</span>
 <h3>Instrument Imports</h3>
-<p>Converts SFZ, Decent Sampler, and Logic Sampler (EXS) instruments into .elmulti files, folding includes, defines, and keyswitches into a mapping the Tonverk loads. Batch-convert a whole folder.</p>
+<p>SFZ, Decent Sampler, Logic and GarageBand Sampler, MPC programs, SoundFonts, and Ableton Live presets, racks, sets, and Live Packs, without Live installed. Drum kits come in as drum sets, their pads tuned as they played. Batch-convert a whole folder.</p>
 </div>
 <div class="feature-card">
 <span class="feature-icon">🌊</span>
 <h3>Wavetables</h3>
-<p>Nine generators plus extraction from your own samples, always saved with the <code>_wt</code> filename the Tonverk reads the wave size from.</p>
+<p>Generate one, take one from a sample, or stack a folder of single cycles into a table. Serum, Vital, and CarveToy tables open at their own size, and you choose which 64 waves go to the card. Always saved with the <code>_wt</code> name the Tonverk reads the size from.</p>
 </div>
 <div class="feature-card">
-<span class="feature-icon">🔁</span>
-<h3>Pattern Copy</h3>
-<p>Open two projects side by side, see every pattern and track, and copy a pattern with its trigs, locks, conditions, machines, and effects — within a project or into another one.</p>
+<span class="feature-icon">🎼</span>
+<h3>Tracks</h3>
+<p>A step sequencer with velocity, length, micro timing, swing, retrigs, and trig conditions. Chords, arp, and glide as on the machine. MIDI files in and out, and record what you play on the Tonverk's keys or any keyboard.</p>
 </div>
 <div class="feature-card">
-<span class="feature-icon">🎛</span>
-<h3>Track Knobs</h3>
-<p>Read a track's TRIG, SRC, FLTR, AMP, FX, and MOD pages laid out as on the machine, in the same units. Change values on the Mac and write them back.</p>
+<span class="feature-icon">⏏️</span>
+<h3>Onto the Tonverk</h3>
+<p>Send a kit to the card, or put the kit and its pattern on any of the eight tracks of a new project or one already there: drums on one track, an instrument on another, ready to load.</p>
 </div>
 </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- MORE SCREENSHOTS. Replace each placeholder with
-     <img src="assets/overlook-drumset.png" …>, overlook-instrument.png, overlook-wavetable.png -->
 <section>
 <p class="section-label">A closer look</p>
 <h2 class="section-title">One app for every kind<br>of file the Tonverk loads.</h2>
 <div class="shots-grid">
 <figure>
-<div class="shot-todo">SCREENSHOT TO COME — DRUM SET</div>
-<figcaption><strong>Drum sets</strong> — a loop sliced across a pad, sequenced as Subtracks.</figcaption>
-</figure>
-<figure>
-<div class="shot-todo">SCREENSHOT TO COME — INSTRUMENT</div>
+<img src="assets/overlook-instrument.png" alt="Overlook's Instrument screen: Ottava_MultiOne across the keys, a bar of chords in the piano roll and as trigs" />
 <figcaption><strong>Instruments</strong> — samples on keys, velocity layers, notes and chords.</figcaption>
 </figure>
 <figure>
-<div class="shot-todo">SCREENSHOT TO COME — WAVETABLE</div>
+<img src="assets/overlook-wavetable.png" alt="Overlook's Wavetable screen: a 64-wave FM table drawn in 3D, measuring clean" />
 <figcaption><strong>Wavetables</strong> — generated or taken from a sample, named correctly.</figcaption>
 </figure>
 </div>
@@ -164,12 +168,12 @@ Control beyond the box.
 <div class="how-step">
 <p class="step-num">SEND</p>
 <h3>Straight to the card</h3>
-<p>Send a kit to the card, or make a new project with it on a track and the pattern already in it — ready to load.</p>
+<p>Send a kit to the card, or make a new project with it on a track and the pattern already in it. One click, then <em>Safe to eject</em>.</p>
 </div>
 <div class="how-step">
-<p class="step-num">COPY</p>
-<h3>Patterns between projects</h3>
-<p>The kits, instruments, samples, and wavetables a pattern uses come with it, shared with the target project where it already has them.</p>
+<p class="step-num">PLAY</p>
+<h3>Ready to load</h3>
+<p>Wavetables go in with the name the Wavefinder needs, instruments with every sample on its key, drum sets with their patterns. Load them on the Tonverk and they play as they did in Overlook.</p>
 </div>
 </div>
 </section>
@@ -184,7 +188,7 @@ Control beyond the box.
 <div class="feature-card">
 <span class="feature-icon">💾</span>
 <h3>Backed Up First</h3>
-<p>Anything that writes into a project backs the whole project up to your Mac before it touches it.</p>
+<p>Anything that writes into a project backs the whole project up to your computer before it touches it.</p>
 </div>
 <div class="feature-card">
 <span class="feature-icon">✋</span>
@@ -194,7 +198,7 @@ Control beyond the box.
 <div class="feature-card">
 <span class="feature-icon">✅</span>
 <h3>Checked Before Writing</h3>
-<p>Projects are checked before every write. A damaged one is flagged, never written to, and can be rebuilt as a new project.</p>
+<p>Projects are checked before every write, and a damaged one is never written to. A kit whose sample can't be found isn't written either: you're told which file, and where it looked.</p>
 </div>
 <div class="feature-card">
 <span class="feature-icon">⏏️</span>
@@ -206,23 +210,36 @@ Control beyond the box.
 
 <div class="divider"></div>
 
-<!-- PRICING / NOTIFY -->
+<!-- WHAT YOU NEED: the platform line, word for word (BUSINESS.md, 2026-10-17). -->
+<section>
+<p class="section-label">What you need</p>
+<h2 class="section-title">The computer you already have.</h2>
+<p class="platform-line">Runs on the computer you already have: any Mac from 2015 on (macOS 11 Big Sur or later, Intel or Apple silicon), and Windows 10 or 11.</p>
+<p class="needs">An Elektron Tonverk and its SD card is what Overlook is built for; the sound-making tools work without one. An internet connection is needed once, to activate.</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRICING -->
 <section id="buy">
 <p class="section-label">Pricing</p>
-<h2 class="section-title" style="text-align:center;">Launching soon.</h2>
+<h2 class="section-title" style="text-align:center;">Pay once. Mac and Windows. Yours forever.</h2>
 <div class="pricing-card">
 <div class="price-amount">$49</div>
-<div class="price-label">One-time purchase — no subscription</div>
-<div class="price-note">Launch price</div>
-<p class="price-rise">Overlook is early and growing every week, and the price will go up as it does.<br>Get in now and the complete project workflow comes to you as a free update.</p>
+<div class="price-label">One-time purchase — no subscription<br>Plus sales tax / VAT at checkout</div>
+<div class="price-note">Launch price through Nov 30 — then $79</div>
+<p class="price-rise">Overlook is early and growing. Buy now and you have a say in what gets built, and pay nothing more when Projects, Set and Card are finished.</p>
 <ul class="pricing-includes">
-<li>Mac app for Apple silicon &amp; Intel</li>
-<li>macOS 11 Big Sur or later</li>
-<li>Drum sets, instruments, wavetables &amp; projects</li>
-<li>The completed project workflow, free</li>
+<li>Mac app for Apple silicon &amp; Intel, macOS 11 or later</li>
+<li>Windows app for Windows 10 or 11</li>
+<li>Drum sets, instruments &amp; wavetables, straight to the card</li>
+<li>Projects, Set &amp; Card as they're finished, free</li>
+<li>License key valid for three machines, Mac or Windows</li>
+<li>One activation, then never again — no periodic checks</li>
+<li>Start Here guide included</li>
 </ul>
-<a class="btn-notify-full" href="mailto:support@brkbeats.dev?subject=Notify me when Overlook launches">Notify Me at Launch</a>
-<p class="pricing-note">Overlook is in beta. Drop me a line and I'll let you know the moment it's live. Windows is on the list, but it isn't ready yet.</p>
+<a class="btn-buy-full" href="https://www.creem.io/payment/prod_6xw9LGLfRDLBiA3Qo4QGI6">Buy Now — $49</a>
+<p class="pricing-note">Secure checkout by Creem · Card or Apple Pay</p>
 </div>
 </section>
 
@@ -256,8 +273,8 @@ Control beyond the box.
 <h3>Ottava</h3>
 <p>A polyphonic synth that shows you what it's doing: a built-in scope, 82 presets that teach, one-click one-shot rendering, and microtonal tuning.</p>
 <div class="product-footer">
-<span class="product-price">Coming soon</span>
-<span class="product-cta">Learn More →</span>
+<span class="product-price">$29</span>
+<span class="product-cta">View Product →</span>
 </div>
 </div>
 </a>
