@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Overlook for Tonverk – Mac &amp; Windows App – Brkbeats</title>
-<meta name="description" content="Overlook is a Mac and Windows app for the Elektron Tonverk: build drum sets, instruments, and wavetables, sequence them, and send them straight to the card. Any Mac from 2015 on (macOS 11 or later) and Windows 10 or 11." />
+<meta name="description" content="Overlook is a Mac and Windows app for the Elektron Tonverk: build drum sets, instruments, and wavetables, sequence them, send them straight to the card, and copy patterns between projects. Any Mac from 2015 on (macOS 11 or later) and Windows 10 or 11." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
@@ -52,7 +52,7 @@
 <p class="hero-eyebrow">Overlook for Tonverk · Mac &amp; Windows</p>
 <h1>Curate your <span>card.</span></h1>
 <p class="hero-sub">
-Build kits, instruments, and wavetables, sequence them, and send them straight to the card.
+Build kits, instruments, and wavetables, sequence them, and send them straight to the card. Copy patterns between projects.
 </p>
 <div class="hero-actions">
 <a class="btn-primary" href="#buy">Buy Now</a>
@@ -70,8 +70,9 @@ Build kits, instruments, and wavetables, sequence them, and send them straight t
 
 <div class="divider"></div>
 
-<!-- Screenshots: the 2026-10-22 build, 1320-point window at 2x, shown at 1920 wide. The kit is loops
-     built from Steve's BrkbeatsKit hits; the instrument is Ottava_MultiOne. -->
+<!-- Screenshots: packaging/site_shots.py in the tonverk repo, 1320-point window at 2x, shown at 1920 wide.
+     Drum set, wavetable and projects from 0.9.1 (2026-10-25); the instrument from 0.9 (2026-10-22). The kit
+     is loops built from Steve's BrkbeatsKit hits; the instrument is Ottava_MultiOne. -->
 <div class="shot">
 <img src="assets/overlook-drumset.png" alt="Overlook's Drum set screen: a break sliced at its hits on pad C, five pads loaded, and the slices sequenced as trigs over two bars" />
 </div>
@@ -126,7 +127,7 @@ Build kits, instruments, and wavetables, sequence them, and send them straight t
 <div class="feature-card">
 <span class="feature-icon">🎼</span>
 <h3>Tracks</h3>
-<p>A step sequencer with velocity, length, micro timing, swing, retrigs, and trig conditions. Chords, arp, and glide as on the machine. MIDI files in and out, and record what you play on the Tonverk's keys or any keyboard.</p>
+<p>A step sequencer with velocity, length, micro timing, swing, retrigs, trig conditions, and PROB. Chords, arp, and glide as on the machine. Up to 128 patterns in a document. MIDI files in and out, and record what you play on the Tonverk's keys or any keyboard.</p>
 </div>
 <div class="feature-card">
 <span class="feature-icon">⏏️</span>
@@ -135,6 +136,51 @@ Build kits, instruments, and wavetables, sequence them, and send them straight t
 </div>
 </div>
 </section>
+
+<div class="divider"></div>
+
+<!-- NEW IN 0.9.1 (2026-10-25). Each line checked on the Tonverk or on all four machines; see BUSINESS.md, "0.9.1". -->
+<section>
+<p class="section-label">New in 0.9.1</p>
+<h2 class="section-title">From one pattern<br>to a whole set.</h2>
+<p class="needs" style="margin: -8px 0 28px;">A free update for everyone who bought 0.9.</p>
+<div class="features-grid three">
+<div class="feature-card">
+<span class="feature-icon">🎲</span>
+<h3>Vary…</h3>
+<p>Turn one pattern into several. Trigs move to other pads on the same steps, slices change, a trig or two gets a PROB, and the rhythm and the downbeat stay. Each copy goes a little further than the last, and one undo takes them all back.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">🎯</span>
+<h3>PROB</h3>
+<p>Give a trig a chance of playing, as on the TRIG page. The preview and the Set roll it, and the Tonverk gets it as its own PROB.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">🅰️</span>
+<h3>Duplicate and A/B</h3>
+<p>Duplicate a pattern to change it, A/B to hear the two against each other, and name them Verse and Chorus.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">📂</span>
+<h3>Any Pattern, Any Project</h3>
+<p>Hear the drums and samples of any pattern on the card without loading it on the machine, then copy it into another project. Its kits, samples, chords, scales, trig conditions, and knobs come with it.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">🗂️</span>
+<h3>Set</h3>
+<p>Build patterns from your documents, one per track, and hear them together: every pattern in turn, or in your own song order. Send set puts them on the card as one new project. The song order stays in Overlook for now.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">▶️</span>
+<h3>Starts the Tonverk</h3>
+<p>Press play in Overlook and the Tonverk starts with it, over USB. Stop stops both.</p>
+</div>
+</div>
+</section>
+
+<div class="shot" style="margin-top: 0;">
+<img src="assets/overlook-projects.png" alt="Overlook's Projects screen: pattern A02 of one project playing, ready to copy into pattern A01 of another" />
+</div>
 
 <div class="divider"></div>
 
@@ -168,7 +214,7 @@ Build kits, instruments, and wavetables, sequence them, and send them straight t
 <div class="how-step">
 <p class="step-num">SEND</p>
 <h3>Straight to the card</h3>
-<p>Send a kit to the card, or make a new project with it on a track and the pattern already in it. One click, then <em>Safe to eject</em>.</p>
+<p>Send a kit to the card, or make a new project with it on a track and the pattern already in it. One click, then <em>Safe to eject</em>. Every kit sent remembers which document it came from, and opens it again.</p>
 </div>
 <div class="how-step">
 <p class="step-num">PLAY</p>
@@ -184,7 +230,7 @@ Build kits, instruments, and wavetables, sequence them, and send them straight t
 <section>
 <p class="section-label">Safety first</p>
 <h2 class="section-title">Your projects come first.</h2>
-<div class="features-grid">
+<div class="features-grid three">
 <div class="feature-card">
 <span class="feature-icon">💾</span>
 <h3>Backed Up First</h3>
@@ -204,6 +250,16 @@ Build kits, instruments, and wavetables, sequence them, and send them straight t
 <span class="feature-icon">⏏️</span>
 <h3>Safe to Eject</h3>
 <p>Everything is flushed to the card, and the app tells you when it's actually safe to eject.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">💻</span>
+<h3>A Copy on Your Computer</h3>
+<p>Each time the card is mounted, Overlook copies its projects to your computer, only reading the card. Look through them with the card back in the Tonverk.</p>
+</div>
+<div class="feature-card">
+<span class="feature-icon">🎧</span>
+<h3>Documents Keep Their Sounds</h3>
+<p>A saved document keeps a copy of the audio it uses beside it, so it still opens after the files you started from have moved.</p>
 </div>
 </div>
 </section>
