@@ -306,7 +306,7 @@ Drop in a loop: Overlook slices it, writes the pattern that plays it back, in or
 <li>One activation, then never again — no periodic checks</li>
 <li>Start Here guide included</li>
 </ul>
-<a class="btn-buy-full" href="https://www.creem.io/payment/prod_6xw9LGLfRDLBiA3Qo4QGI6">Buy Now — $49</a>
+<a class="btn-buy-full" href="https://www.creem.io/payment/prod_6xw9LGLfRDLBiA3Qo4QGI6" rel="nofollow" data-buy="overlook">Buy Now — $49</a>
 <p class="pricing-note">Secure checkout by Creem · Card or Apple Pay</p>
 </div>
 </section>
@@ -368,6 +368,23 @@ Drop in a loop: Overlook slices it, writes the pattern that plays it back, in or
 <p style="margin-top:20px; font-size:12px;">© 2026 Brkbeats. All rights reserved.</p>
 </footer>
 
+  <!-- Buy clicks: the button is a plain link to Creem; on a click the page also sends a note (product, where
+       this visit came from) to our click counter with sendBeacon, which never delays or blocks the click.
+       No cookies, nothing stored in the browser. -->
+  <script>
+    (function () {
+      var s = new URLSearchParams(location.search).get('src');
+      if (!s) { try { s = document.referrer ? new URL(document.referrer).hostname : 'direct'; } catch (e) { s = 'direct'; } }
+      document.querySelectorAll('a[data-buy]').forEach(function (a) {
+        a.addEventListener('click', function () {
+          try {
+            navigator.sendBeacon('https://brkbeats-clicks.brkbeats-dev.workers.dev/click',
+                                 JSON.stringify({ product: a.getAttribute('data-buy'), src: s }));
+          } catch (e) { /* the click goes on to Creem regardless */ }
+        });
+      });
+    })();
+  </script>
   <!-- Cloudflare Web Analytics: cookieless page counts, no personal data -->
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6b745f9adb434fdb9da7a3e9d561f4b3"}'></script>
 </body>
