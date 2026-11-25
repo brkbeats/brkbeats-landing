@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Overlook manual, Part 1: The basics (draft) – Brkbeats</title>
+<meta name="description" content="The first part of Overlook's new manual, in draft: the words the Tonverk and Overlook use, where things live, the window, your first drum kit, putting it on the Tonverk, and backing up a project." />
+<meta name="robots" content="noindex" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Brkbeats" />
+<meta property="og:title" content="Overlook manual, Part 1: The basics (draft)" />
+<meta property="og:description" content="Overlook's manual, rewritten from zero: how, not what. Part 1, in draft, for Tonverk owners to read and comment on." />
+<meta property="og:url" content="https://www.brkbeats.dev/overlook-manual.html" />
+<meta property="og:image" content="https://www.brkbeats.dev/assets/og/overlook.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css?v=5" />
+<style>
+.manual { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+.manual h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 4vw, 42px); line-height: 1.15;
+  letter-spacing: -0.02em; margin: 24px 0 14px; }
+.manual h2 { font-family: 'Space Grotesk', sans-serif; font-size: 26px; line-height: 1.25; margin: 72px 0 16px;
+  padding-top: 32px; border-top: 1px solid var(--border); }
+.manual h3 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; color: var(--accent); margin: 36px 0 10px; }
+.manual p, .manual li { color: #cfcfcf; font-size: 16px; line-height: 1.7; }
+.manual p { margin: 0 0 14px; }
+.manual strong { color: var(--text); }
+.manual a { color: var(--accent); }
+.manual ol, .manual ul { padding-left: 26px; margin: 0 0 16px; }
+.manual li { margin: 8px 0; }
+.manual li > p { margin: 8px 0; }
+.manual code { font-family: var(--mono); font-size: 13.5px; background: var(--card); padding: 1px 5px; border-radius: 4px; }
+.manual pre { background: var(--card); padding: 12px 16px; border-radius: 8px; overflow-x: auto; }
+.manual pre code { background: none; padding: 0; }
+.manual img { display: block; max-width: 100%; height: auto; margin: 14px 0 18px; border-radius: 8px;
+  border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+.manual table { border-collapse: collapse; margin: 14px 0 20px; width: 100%; font-size: 15px; }
+.manual th, .manual td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top;
+  color: #cfcfcf; }
+.manual th { background: var(--card); color: var(--text); font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+.manual blockquote { margin: 18px 0; padding: 10px 18px; border-left: 3px solid var(--accent); background: var(--surface);
+  border-radius: 0 8px 8px 0; }
+.manual blockquote p { margin: 6px 0; }
+.manual hr { display: none; }
+.draft-note { border: 1px solid var(--accent-dim); background: rgba(255,140,0,0.06); border-radius: 10px;
+  padding: 16px 20px; margin: 8px 0 28px; }
+.draft-note p { margin: 0 0 8px; color: var(--text); }
+.draft-note p:last-child { margin-bottom: 0; }
+.manual .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent); margin: 0; }
+.coming li { color: var(--muted); }
+@media (max-width: 600px) { .manual { padding: 24px 16px 60px; } .manual table { font-size: 14px; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+<a class="nav-logo" href="/">BRKBEATS</a>
+<div class="nav-links">
+<a class="nav-link" href="/#products">All Products</a>
+</div>
+<a class="nav-buy" href="overlook.html">Overlook</a>
+</nav>
+
+<main class="manual">
+
+<p class="eyebrow">Overlook manual · draft</p>
+<h1>Part 1: The basics</h1>
+<div class="draft-note">
+<p><strong>This is a draft</strong>, for Overlook 0.9.3. It's being rewritten from the ground up after buyers on the
+Elektronauts forum said the old manual tells you <em>what</em> everything is, but not <em>how</em> to get things done.
+This part is the start: read it in order, from zero.</p>
+<p>If something here is unclear, or your Tonverk shows something different, say so in the
+<a href="https://www.elektronauts.com/t/256372">Elektronauts thread</a>, or email
+<a href="mailto:support@brkbeats.dev">support@brkbeats.dev</a>.</p>
+</div>
+<p>Every job in this manual has the same shape: what you'll end up with, what you need, numbered steps, one action
+each, with <strong>You should see:</strong> after the ones where something changes, then what to do if it doesn't
+look like that.</p>
+
+<h2>1. What's what: the words this manual uses</h2>
+<p>The Tonverk and Overlook use a few words in a precise way. This page is all of them. You don't need to learn it before you start; come back when a word in another chapter isn't clear.</p>
+<h3>On the Tonverk</h3>
+<p><strong>The card.</strong> The Tonverk's SD card. Everything the Tonverk plays lives on it: your sounds, your projects, and Elektron's factory library. The Tonverk and your computer can't use the card at the same time. To work on it from the computer, put the Tonverk in <strong>USB disk mode</strong>: the card appears on the computer as a drive, and the Tonverk stops playing until you eject the card and leave disk mode.</p>
+<p><strong>Project.</strong> What you load on the Tonverk to play. A project holds 128 <strong>patterns</strong>, its <strong>songs</strong>, and which sound each track uses. It doesn't hold any audio. It points at its samples by where they are on the card, the way a playlist points at songs. That's why moving or renaming a sample on the card breaks every project that uses it.</p>
+<p><strong>Pattern.</strong> One of a project's 128 slots, <strong>A01</strong> to <strong>H16</strong> (eight banks of sixteen). A pattern has 16 tracks:</p>
+<ul><li><p><strong>Tracks 1 to 8</strong> are the audio tracks. Each has one <strong>machine</strong> (below), which decides what it plays: a whole drum set of eight sounds, an instrument, a wavetable or a single sample. Any of them can be a MIDI track instead, playing other gear.</p></li><li><p>Tracks 9 to 16 are four buses, three send effects and the mix. Overlook leaves those as they are.</p></li></ul>
+<p><strong>Trig.</strong> A step in a pattern that plays. On the Tonverk you set trigs with the sixteen keys; in Overlook you click a step.</p>
+<p><strong>Machine.</strong> What an audio track uses to play its sound. Overlook makes sounds for three of them:</p>
+<table><tr><th>machine</th><th>plays</th><th>on the card it's</th></tr><tr><td><strong>Subtracks</strong></td><td>a <strong>drum set</strong>: eight sounds, each on its own subtrack</td><td>an <code>.eldrum</code> file and its samples</td></tr><tr><td><strong>Multi Player</strong></td><td>an <strong>instrument</strong>: samples across a keyboard</td><td>an <code>.elmulti</code> file and its samples</td></tr><tr><td><strong>Wavefinder</strong></td><td>a <strong>wavetable</strong></td><td>a <code>.wav</code> file of single-cycle waves</td></tr></table>
+<p>A fourth, <strong>Single Player</strong>, plays one sample. Overlook plays and copies Single Player tracks in your Tonverk projects, and a single file you put on a track of an Overlook project goes to the card as it is (chapter 8).</p>
+<p><strong>Audio files.</strong> Overlook opens WAV, AIFF, FLAC, MP3 and CAF files. What goes to the card is always something the Tonverk plays: a kit's samples are written as WAV or FLAC (you choose on the Send page), and a single file goes as it is, except an MP3, 32-bit float AIFF or CAF, which is made a WAV first, the same sound sample for sample.</p>
+<p><strong>Drum set</strong> (also called a kit). Up to eight sounds, played by the Subtracks machine. Overlook calls the eight places <strong>pads</strong>. A pad can hold one sample, or many: different samples for soft and hard hits (<strong>velocity layers</strong>), samples that take turns (<strong>round robins</strong>), or the pieces of a loop (<strong>slices</strong>).</p>
+<p><strong>Instrument.</strong> Samples spread across a keyboard, each playing a range of keys, played by the Multi Player.</p>
+<p><strong>Wavetable.</strong> A row of single-cycle waves the Wavefinder sweeps through.</p>
+<p><strong>Preset.</strong> A track's whole sound saved under a name: the drum set or instrument plus the track's settings (filter, envelope, effects). Load it on any track of any project.</p>
+<p><strong>Sample.</strong> One audio file.</p>
+<h3>In Overlook</h3>
+<p><strong>Document.</strong> A drum set or an instrument as you work on it in Overlook, saved as an <code>.ovlk</code> file on your computer. It remembers which files you used, how they're cut, and what's on each pad or key. When you save it, Overlook copies the audio it uses into a folder beside it, so the document still opens if the original files move.</p>
+<p><strong>Overlook project.</strong> Your documents on the eight audio tracks, with their patterns and songs, saved as an <code>.ovlkset</code> file on your computer. It isn't on the Tonverk until you send it. Sending turns it into a Tonverk project.</p>
+<p><strong>Send.</strong> Writes what you made in Overlook onto the card, in the Tonverk's own files: a document becomes an <code>.eldrum</code> or <code>.elmulti</code> with its samples; an Overlook project becomes a Tonverk project. It can also write an MPC project, or files into a folder on your computer. SP-404MKII projects are coming in a later update.</p>
+<blockquote><p><strong>Two kinds of project.</strong> A <em>Tonverk project</em> is on the card, and is what the Tonverk loads. An <em>Overlook project</em> is on your computer, and is how you build one. This manual always says which.</p></blockquote>
+<hr>
+<h2>2. Where things live: the card, and your computer</h2>
+<h3>On the card</h3>
+<p>Open the card on your computer and you'll see two folders:</p>
+<pre><code>User/                         everything that&#x27;s yours
+  Drum Sets/                  drum sets (.eldrum), each in a folder with its samples
+  Multi-sampled Instruments/  instruments (.elmulti), each in a folder with its samples
+  Single Samples/             samples on their own
+  Wavetables/                 wavetables
+  Recordings/                 what you sampled on the Tonverk
+  Presets/                    presets
+  Projects/                   one folder per Tonverk project
+Elektron/                     the factory library</code></pre>
+<p>Two rules keep a card healthy:</p>
+<ol><li><p><strong>Don't move or rename anything a project uses.</strong> The project only knows where its samples were. Overlook's <strong>View › Tonverk Card</strong>, on the <strong>Files</strong> tab, shows which projects use each folder before you touch it (chapter 12).</p></li><li><p><strong>Leave the Elektron folder alone.</strong> It's the same on every Tonverk. Overlook reads it, never changes it, and never copies it into a backup, since every card already has it.</p></li></ol>
+<h3>On your computer</h3>
+<p>Overlook keeps everything it makes in <strong>Documents › Overlook</strong>:</p>
+<table><tr><th>what</th><th>where</th></tr><tr><td>your documents and Overlook projects</td><td>Documents › Overlook, or wherever you save them</td></tr><tr><td>the audio a document uses</td><td>a folder beside the document, named after it: <em>BrkbeatsKit.ovlk</em> keeps <em>BrkbeatsKit Audio</em></td></tr><tr><td>a copy of the card's projects (no audio)</td><td>Documents › Overlook › Tonverk Card</td></tr><tr><td>a backup taken before Overlook changes a Tonverk project</td><td>Documents › Overlook › Tonverk Backups</td></tr><tr><td>what you record into Overlook</td><td>Music › Overlook › Recordings</td></tr></table>
+<p><strong>The copy of the card</strong> is made by itself every time the card is mounted. It holds every project, but none of the audio. It's why you can look through your projects and patterns in Overlook while the card is back in the Tonverk. It's a convenience, not a backup: for a real backup with the samples, see chapter 6.</p>
+<h3>When Overlook writes to the card</h3>
+<p>Most of what you do in Overlook only reads the card. It writes to the card only when you ask it to, with one of these:</p>
+<ul><li><p><strong>Send…</strong> to the Tonverk's card (a kit, or a project)</p></li><li><p><strong>Copy pattern</strong> (View › Tonverk Card, Projects tab)</p></li><li><p><strong>Write to project</strong> (a track's knobs)</p></li><li><p><strong>Restore backup…</strong></p></li><li><p><strong>Collect samples…</strong></p></li><li><p><strong>Move to Trash…</strong></p></li></ul>
+<p>Each one checks first, backs up a Tonverk project before changing it, and ends with <strong>Safe to eject</strong> in the status line at the bottom of the window. Wait for those words before you eject the card.</p>
+<hr>
+<h2>3. The window</h2>
+<h3>The Start window</h3>
+<img alt="The Start window" src="assets/manual/front.jpg" loading="lazy">
+<p>When Overlook opens, it asks what you've come to do:</p>
+<ul><li><p><strong>Get audio ready.</strong> <strong>Drum set</strong>, <strong>Instrument</strong> or <strong>Wavetable</strong> starts a new one, to go to the card. <strong>Open a document or a kit…</strong> opens one you have: an Overlook document, a kit from the card (<code>.eldrum</code>, <code>.elmulti</code>), or another sampler's instrument.</p></li><li><p><strong>Build sequences.</strong> <strong>New project</strong> and <strong>Open a project…</strong> are for putting your documents on tracks, with patterns and songs (chapter 8). Projects you've opened before are listed under them.</p></li></ul>
+<p>Untick <strong>Show this when Overlook opens</strong> to go straight to a new drum set each time. <strong>View › Start…</strong> brings the Start window back.</p>
+<h3>The main window</h3>
+<img alt="The main window, with a drum set open" src="assets/manual/kit.jpg" loading="lazy">
+<p>Five parts:</p>
+<ol><li><p><strong>The toolbar</strong>, across the top.</p>
+<ul><li><p>On the left are the four things you make: <strong>Drum set</strong>, <strong>Instrument</strong>, <strong>Wavetable</strong> and <strong>Project</strong>. The lit one is on screen.</p></li><li><p>Next come the document's name (click it to rename it), its tempo (<strong>bpm</strong>) and <strong>▶</strong>, which plays it (or press Space).</p></li><li><p>On the right, <strong>Send…</strong> puts what you made on the card (chapter 5), and <strong>Use in project</strong> puts it on a track of your Overlook project (chapter 8).</p></li></ul></li><li><p><strong>The file browser</strong>, on the left. These are the files on your computer.</p>
+<ul><li><p>Click a folder to open it, and <strong>↑</strong> to go back up.</p></li><li><p><strong>Go to…</strong> jumps to your Home, Desktop, Downloads, Music and Documents folders, and to your drives, the Tonverk's card among them when it's mounted.</p></li><li><p>The <strong>▶</strong> beside a file plays it.</p></li><li><p><strong>In project</strong>, at the bottom, lists the files this document uses.</p></li></ul></li><li><p><strong>The middle</strong>, what you're working on. On a drum set:</p>
+<ul><li><p>The eight <strong>pads</strong>, <strong>C</strong> to <strong>C+</strong>, are the Tonverk's eight subtracks in order. Click a pad to select it.</p></li><li><p><strong>Slice</strong> and <strong>Build</strong>, under the pads, decide what clicking a file does. <strong>Build</strong> puts the whole file on the selected pad. <strong>Slice</strong> cuts a loop into pieces (chapter 7).</p></li></ul></li><li><p><strong>The inspector</strong>, on the right. It shows the settings of whatever is selected, in sections. Click a section's name to fold it. <strong>›</strong> folds the whole inspector away; <strong>View › Inspector</strong> brings it back.</p></li><li><p><strong>The status line</strong>, along the bottom.</p>
+<ul><li><p>It tells you what just happened: <em>Kick.wav → C</em>, <em>Safe to eject</em>.</p></li><li><p><strong>Rest the pointer on any control and it says what that control does.</strong></p></li><li><p>At the right are how much of the Tonverk's room the kit takes (<em>4 slices · 4/1023 slots</em>: a project holds up to 1023 samples), and <strong>Restart audio</strong>, if the sound ever stops.</p></li></ul></li></ol>
+<h3>The card's screen</h3>
+<p><strong>View › Tonverk Card</strong> (⌘5, or Ctrl+5 on Windows) shows what's on the Tonverk's card. It has two tabs, <strong>Projects</strong> and <strong>Files</strong> (chapters 6, 9 and 12). Click <strong>Drum set</strong> in the toolbar to come back.</p>
+<img alt="The toolbar on the card's screen" src="assets/manual/card-toolbar.jpg" loading="lazy">
+<h3>Keys worth knowing</h3>
+<table><tr><th></th><th>Mac</th><th>Windows</th></tr><tr><td>Play and stop</td><td>Space</td><td>Space</td></tr><tr><td>Undo</td><td>⌘Z</td><td>Ctrl+Z</td></tr><tr><td>Save</td><td>⌘S</td><td>Ctrl+S</td></tr><tr><td>Take off the selected trig</td><td>Delete or Backspace</td><td>Delete or Backspace</td></tr><tr><td>Drum set · Instrument · Wavetable · Project · Tonverk Card</td><td>⌘1 … ⌘5</td><td>Ctrl+1 … Ctrl+5</td></tr><tr><td>Settings</td><td>⌘,</td><td>Ctrl+,</td></tr></table>
+<hr>
+<h2>4. Your first drum kit, from one-shots</h2>
+<p><strong>What you'll end up with:</strong> a drum set with a kick, a snare and two hats, one on each of four pads, saved on your computer.</p>
+<p><strong>What you need:</strong> a few one-shots, single hits, in a folder on your computer: WAV, AIFF, FLAC, MP3 or CAF. This chapter uses a folder called <em>My One-shots</em>.</p>
+<h3>Steps</h3>
+<ol><li><p>Open Overlook. In the Start window, under <strong>Get audio ready</strong>, click <strong>Drum set</strong>.</p>
+<p><strong>You should see:</strong> eight empty pads, <strong>C</strong> to <strong>C+</strong>, with <strong>C</strong> outlined: it's selected.</p></li><li><p>Click <strong>Build</strong>, under the pads.</p>
+<p><strong>You should see:</strong> <strong>Build</strong> lit, and in the inspector on the right, a box saying <em>Click or drop files here</em>.</p>
+<img alt="An empty drum set, in Build" src="assets/manual/pads-empty.jpg" loading="lazy"></li><li><p>In the file browser on the left, open your one-shots folder: <strong>Go to…</strong> to get near it, then click folders until you're in it.</p>
+<p><strong>You should see:</strong> your one-shots listed. Click the <strong>▶</strong> beside one to hear it.</p></li><li><p>With pad <strong>C</strong> selected, click your kick in the list.</p>
+<p><strong>You should see:</strong> pad <strong>C</strong> named after the file, with a <strong>1</strong> under it (one sample). The status line says <em>Kick.wav → C</em>, and the inspector lists <em>Kick.wav</em> under <strong>L1</strong>. Click <em>Kick.wav</em> there to hear it.</p>
+<img alt="Pad C holds the kick" src="assets/manual/first-sound-pads.jpg" loading="lazy"></li><li><p>Click pad <strong>D</strong>, then click your snare in the list.</p></li><li><p>Click pad <strong>E</strong>, then your closed hat.</p></li><li><p>Click pad <strong>F</strong>, then your open hat.</p>
+<p><strong>You should see:</strong> four pads named, each with a <strong>1</strong>.</p></li><li><p><em>(Optional.)</em> Give each pad its type: select the pad, then in the inspector's <strong>Pad</strong> section, type <strong>Kick</strong>, <strong>Snare</strong>, <strong>Hat</strong> or <strong>Open hat</strong> in <strong>type</strong> (or pick it from the field's list), and press Return. The pad shows its type, and Overlook uses it later to sort and vary your kits (chapters 15 and 16).</p>
+<img alt="Pads C to F with their types" src="assets/manual/kit-pads.jpg" loading="lazy"></li><li><p>Click <strong>Untitled</strong>, at the top, type a name for the kit (here <em>First Kit</em>), and press Return.</p></li><li><p>Choose <strong>File › Save</strong> (⌘S). The save window starts in <strong>Documents › Overlook</strong>, with the name <em>First_Kit.ovlk</em>. Click <strong>Save</strong>.</p>
+<p><strong>You should see:</strong> the status line says <em>Saved First_Kit.ovlk</em>, and that the four files were copied into <em>First_Kit Audio</em>. That folder sits beside the document, so the kit still opens if you move or delete your one-shots.</p></li></ol>
+<h3>If it doesn't look like that</h3>
+<ul><li><p><strong>A file went onto the wrong pad.</strong> Select that pad and click the <strong>×</strong> beside the file in the inspector (or <strong>⌘Z</strong>, which undoes the last click). Then select the right pad and click the file again.</p></li><li><p><strong>A pad shows a 2.</strong> You clicked a second file with the same pad selected, and it went onto the pad too, as a second velocity layer (chapter 14). Take it off with its <strong>×</strong>.</p></li><li><p><strong>Every one-shot is listed as <em>1 bars 200 bpm</em>.</strong> Overlook guesses a tempo for every file. A one-shot isn't a loop, and it goes to the card as it is: under the pad's name, in the middle, it says <em>Auto: as they are</em>.</p></li></ul>
+<p><strong>Next:</strong> put it on the Tonverk (chapter 5).</p>
+<hr>
+<h2>5. Putting it on the Tonverk</h2>
+<p><strong>What you'll end up with:</strong> your kit on the Tonverk's card, loaded on a track and playing.</p>
+<p><strong>What you need:</strong> the kit from chapter 4, open in Overlook, and the Tonverk connected to your computer with a USB cable.</p>
+<h3>Steps</h3>
+<p><strong>On the Tonverk:</strong></p>
+<ol><li><p>Press <strong>[SETTINGS]</strong>, select <strong>USB DISK MODE</strong> and press <strong>[YES]</strong>.</p></li><li><p>Press <strong>[YES]</strong> again in the pop-up. The Tonverk stops playing while it's in disk mode.</p>
+<p><strong>You should see:</strong> the card on your computer, as a drive called <strong>Tonverk</strong>.</p></li></ol>
+<p><strong>In Overlook:</strong></p>
+<ol start="3"><li><p>Click <strong>Send…</strong>, at the top right.</p></li><li><p>Under <strong>Where it goes</strong>, pick <strong>The Tonverk's card: the kit, ready to load</strong>.</p>
+<p><strong>You should see:</strong> under <strong>What's been checked</strong>, two ticks: <em>Every sample is where the document says</em> and <em>The card is mounted (Tonverk)</em>. Under them, where it goes: <em>User/Drum Sets/First_Kit</em> (on the card, spaces become underscores).</p>
+<img alt="The Send page" src="assets/manual/send-page.jpg" loading="lazy"></li><li><p>Click <strong>Send</strong>.</p>
+<p><strong>You should see:</strong> the status line says the kit is on the card, and ends <strong>Safe to eject</strong>.</p>
+<img alt="Safe to eject" src="assets/manual/sent-status.jpg" loading="lazy"></li><li><p>Eject the card. On a Mac, click the eject button beside <strong>Tonverk</strong> in the Finder's sidebar. On Windows, use <strong>Eject</strong> on the drive in File Explorer. Wait until the drive has gone. Always eject; never just pull the cable.</p></li></ol>
+<p><strong>On the Tonverk:</strong></p>
+<ol start="7"><li><p>Press <strong>[NO]</strong> to leave USB disk mode.</p></li><li><p>Start a new project, so nothing of yours is replaced: press <strong>[FUNC] + [PRESET]</strong> for the FILE menu, select <strong>PROJECT</strong>, then <strong>NEW</strong>, and press <strong>[YES]</strong>. If it asks to save the project you were in, save it.</p></li><li><p>Press <strong>[TRK] + [TRIG 1]</strong> to select track 1.</p></li><li><p>Press <strong>[FUNC] + [SRC]</strong>, select <strong>SUBTRACKS</strong> with <strong>[UP]</strong>/<strong>[DOWN]</strong>, and press <strong>[YES]</strong>.</p></li><li><p>In the list that opens, select <strong>First_Kit</strong> and press <strong>[YES]</strong>.</p></li><li><p>Play the bottom row of keys, the <strong>[SUBTRACKS]</strong> keys.</p>
+<p><strong>You should see</strong> (and hear): the first key plays the kick, the second the snare, the third and fourth the hats: pads C, D, E and F in Overlook.</p></li><li><p>Save the project: <strong>[FUNC] + [PRESET]</strong>, <strong>PROJECT</strong>, <strong>SAVE AS</strong>. The Tonverk suggests a name of its own, two words. Keep it, or rename it (here <em>FIRST KIT</em>): <strong>[LEFT]</strong>/<strong>[RIGHT]</strong> move between the letters, <strong>[UP]</strong>/<strong>[DOWN]</strong> change them, and <strong>[FUNC] + [NO]</strong> erases one. Press <strong>[YES]</strong>.</p></li></ol>
+<h3>If it doesn't look like that</h3>
+<ul><li><p><strong>What's been checked says <em>No Tonverk card is mounted</em>.</strong> The Tonverk isn't in disk mode yet. Click <strong>Cancel</strong>, do steps 1 and 2, wait for the <strong>Tonverk</strong> drive to show up, then click <strong>Send…</strong> again.</p></li><li><p><strong>Send asks whether to replace a kit already on the card.</strong> There's a kit of that name there already. Cancel, rename your kit (step 9 of chapter 4) and send again. Replace it only if it's an earlier version of this one: every project that uses it will play the new files.</p></li></ul>
+<p><strong>Next:</strong> back the project up (chapter 6), or slice a loop onto a pad (chapter 7).</p>
+<hr>
+<h2>6. Backing up a project</h2>
+<p><strong>What you'll end up with:</strong> a folder on your computer holding one Tonverk project and every sample it uses, to keep or to send to someone. It goes back onto any Tonverk card in one step.</p>
+<p>A Tonverk project holds none of its audio, only where its samples are on the card (chapter 1). Copying the project's folder alone saves the patterns, but none of the sound. <strong>Back up with samples…</strong> takes the project and the samples it uses.</p>
+<p><strong>What you need:</strong> the Tonverk in USB disk mode (steps 1 and 2 of chapter 5), and a project on its card: the one from chapter 5 will do.</p>
+<h3>Steps</h3>
+<ol><li><p>Choose <strong>View › Tonverk Card</strong>, then click the <strong>Files</strong> tab.</p>
+<p><strong>You should see:</strong> the card's projects, drum sets and other folders, with which projects use each one.</p></li><li><p>Click your project in the <strong>Projects</strong> table.</p></li><li><p>In the inspector, click <strong>Back up with samples…</strong>.</p>
+<img alt="A project selected on the Files tab" src="assets/manual/card-inspector.jpg" loading="lazy"></li><li><p>Pick the folder on your computer to put the backup in, and click <strong>Open</strong> (on Windows, <strong>Select Folder</strong>).</p>
+<p><strong>You should see:</strong> the status line says <em>Backed up FIRST KIT with 5 files it uses</em>, and where. In that folder: a new folder, <em>FIRST KIT with samples</em>, holding a <strong>User</strong> folder laid out as on the card, and a <em>Read me.txt</em>.</p></li></ol>
+<p>Nothing on the card changes: a backup only reads it.</p>
+<h3>Putting a backup back</h3>
+<ol><li><p>Mount the card (steps 1 and 2 of chapter 5).</p></li><li><p>Choose <strong>View › Tonverk Card</strong>, then <strong>Files</strong>.</p></li><li><p>Click <strong>Restore backup…</strong>, at the top right.</p></li><li><p>Pick the backup's folder (<em>FIRST KIT with samples</em>).</p>
+<p><strong>You should see:</strong> a question saying how many files go back onto the card. Click <strong>OK</strong>.</p></li></ol>
+<p>Every file goes back exactly where it was, so the project finds its samples. Overlook never writes over a file on the card. If a project of that name is already there, the backup goes in under the next free name (<em>FIRST KIT 2</em>).</p>
+<h3>If it doesn't look like that</h3>
+<ul><li><p><strong>Back up with samples… is greyed out.</strong> The card isn't mounted, and you're looking at Overlook's copy of it, which has no audio. Put the Tonverk in disk mode.</p></li><li><p><strong>The project <em>can't be read right now</em>.</strong> It was saved on the Tonverk just before disk mode, and the Tonverk hadn't finished writing it. It finishes when the Tonverk is switched off; then try again.</p></li><li><p><strong>The backup says some files weren't on the card.</strong> The project uses samples that were moved or deleted on the card. Chapter 12 finds them.</p></li><li><p><strong>Factory sounds are listed, not copied.</strong> Elektron's factory library is on every Tonverk's card, so a backup doesn't need it.</p></li></ul>
+<p><strong>Next:</strong> Part 2, in any order.</p>
+<hr>
+
+<h2>Still to come</h2>
+<p><strong>Part 2, everyday jobs:</strong> a loop sliced onto a pad · your sounds in a pattern, in Overlook's project ·
+copying a pattern from one Tonverk project to another · an instrument from a folder of samples · changing a kit that's
+already on the card · looking after the card · sending to an MPC.</p>
+<p><strong>Part 3, going further:</strong> velocity layers and round robins · sorting a loop's hits by type, and the
+slice library · Vary and Random no-repeat · trigs in detail · recording an instrument (Row and Auto-sample) ·
+wavetables · other samplers' instruments, and Batch · MIDI files in and out · settings.</p>
+<p><strong>Reference:</strong> the Tonverk's limits, the files Overlook works with, keys, and what to do when
+something goes wrong.</p>
+
+</main>
+
+<div class="divider"></div>
+
+<p class="disclaimer">Overlook is an independent app and isn't affiliated with or endorsed by Elektron or Akai Professional.</p>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-logo">BRKBEATS</div>
+<p>Built by an independent developer in Austin, Texas.</p>
+<p style="margin-top:8px;">
+<a href="mailto:support@brkbeats.dev">support@brkbeats.dev</a>
+</p>
+<p style="margin-top: 14px; font-size: 13px; word-spacing: 6px;">
+<a href="/refund.html">Refund Policy</a> |
+<a href="/privacy.html">Privacy Policy</a> |
+<a href="/terms.html">Terms of Service</a>
+</p>
+<p style="margin-top:20px; font-size:12px;">© 2026 Brkbeats. All rights reserved.</p>
+</footer>
+
+  <!-- Cloudflare Web Analytics: cookieless page counts, no personal data -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6b745f9adb434fdb9da7a3e9d561f4b3"}'></script>
+</body>
+</html>
